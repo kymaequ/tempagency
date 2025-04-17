@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="TempAgency" startnode="45" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
+	<tw-storydata name="TempAgency" startnode="44" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
     return "JavaScript loaded!";
 };
 
@@ -152,18 +152,25 @@ setup.formatSingleName = function(name) {
     // Check if the first letter is a vowel
     const article = vowels.includes(name[0].toLowerCase()) ? 'an' : 'a';
     return `${article} ${name.toLowerCase()}`;
-};</script><tw-tag name="ending" color="orange"></tw-tag><tw-passagedata pid="1" name="Main" tags="" position="525,475" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $questionCount = 0&gt;&gt;
+};</script><tw-tag name="ending" color="orange"></tw-tag><tw-tag name="ending-done" color="green"></tw-tag><tw-passagedata pid="1" name="Main" tags="" position="525,475" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $questionCount = 0&gt;&gt;
 &lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $firstOffer = false, $rejectCount = 0, $currentEndingIndex = 0, $askedQuestions = []&gt;&gt;
-&lt;h2&gt;Agency Lobby&lt;/h2&gt;
+&lt;&lt;if $unlockedSecret == 2&gt;&gt;&lt;h2&gt;Agency Exterior&lt;/h2&gt;
+You arrive outside the &lt;i&gt;New You Temp Agency&lt;/i&gt; to find the door locked and the sign flipped to &quot;CLOSED&quot;. A smaller, handwritten sign taped below reads, &quot;We currently have no available positions. Please come back another time!&quot;
+
+&lt;br&gt;&lt;br&gt;It seems that there&#39;s nothing else left for you here.
+
+&lt;br&gt;&lt;br&gt;[[Go to Main Menu|Main Menu]]
+
+&lt;&lt;else&gt;&gt;&lt;h2&gt;Agency Lobby&lt;/h2&gt;
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;
-	With the tinkling of a bell, you enter the &lt;i&gt;New You Temp Agency&lt;/i&gt; and take a look around the simply-decorated office. There&#39;s a small waiting area with some magazines and brochures. A secretary&#39;s desk stands in front of a door, though there&#39;s currently nobody at the desk. There is a small bell on the desk, an inbox/outbox tray, and a personal computer. Some filing cabinets are off to one side of the door, and a photocopy machine is positioned on the other. You can hear the muffled sounds of someone on the phone through the door behind the desk.
-    
-	&lt;br&gt;&lt;br&gt;[[Jump to Interview|Begin the Interview]]
+	With the tinkling of a bell above the door, you enter the &lt;i&gt;New You Temp Agency&lt;/i&gt; and take a look around the simply-decorated office. There&#39;s a small waiting area with some magazines and brochures. A secretary&#39;s desk stands in front of a door, though there&#39;s currently nobody at the desk. There is a small bell on the desk, an inbox/outbox tray, and a personal computer. Some filing cabinets are off to one side of the door, and a photocopy machine is positioned on the other. You can hear the muffled sounds of someone on the phone through the door behind the desk.
 
 	&lt;br&gt;&lt;br&gt;[[Take a Seat and Wait]]
 	&lt;br&gt;[[Ring the Bell]]
 	&lt;br&gt;[[Snoop Around]]
 	&lt;br&gt;[[Leave]]
+    &lt;br&gt;&lt;&lt;link &quot;(Debug) Set unlockedSecret to 1&quot;&gt;&gt;&lt;&lt;set $unlockedSecret = 1&gt;&gt;&lt;&lt;goto &quot;Main&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
+    &lt;br&gt;&lt;&lt;link &quot;(Debug) Set unlockedSecret to 2&quot;&gt;&gt;&lt;&lt;set $unlockedSecret = 2&gt;&gt;&lt;&lt;goto &quot;Main&quot;&gt;&gt;&lt;&lt;/link&gt;&gt;
 &lt;&lt;elseif $rejectAllAgain &gt; 0&gt;&gt;
 	You apply to a few regular workplaces, but never get any calls back. Hat in hand, you return to the &lt;i&gt;New You Temp Agency&lt;/i&gt; some days later, hopefully with a more open mind. You look around again.&lt;br&gt;&lt;br&gt;
     
@@ -186,19 +193,24 @@ setup.formatSingleName = function(name) {
     &lt;br&gt;[[Ring the Bell]]
 	&lt;br&gt;[[Snoop Around]]
 	&lt;br&gt;[[Leave]]
-&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Take a Seat and Wait" tags="" position="375,775" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;h2&gt; Agency Waiting Area&lt;/h2&gt;
+&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="2" name="Take a Seat and Wait" tags="" position="250,650" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;h2&gt; Agency Waiting Area&lt;/h2&gt;
 You sit down on one of the sofas to wait for someone to return. The sofa is very comfortable and seems almost like it&#39;s got a heated seat. It&#39;s very pleasant, actually.&lt;br&gt;&lt;br&gt;
 
 There&#39;s a small table with magazines and brochures on it.&lt;br&gt;&lt;br&gt;
 
-&lt;div id=&quot;dialogue-options&quot;&gt;
-    	&lt;&lt;link &quot;Look at Magazines and Brochures&quot;&gt;&gt;
-        	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
-            	&lt;&lt;include &quot;Look at Magazines and Brochures&quot;&gt;&gt;
+&lt;div id=&quot;waiting-options&quot;&gt;
+    	&lt;&lt;link &quot;Read the Magazines&quot;&gt;&gt;
+        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
+            	&lt;&lt;include &quot;Read the Magazines&quot;&gt;&gt;
         	&lt;&lt;/replace&gt;&gt;
-    	&lt;&lt;/link&gt;&gt;
-        &lt;br&gt;&lt;&lt;link &quot;Wait&quot;&gt;&gt;
-        	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
+    	&lt;&lt;/link&gt;&gt;&lt;br&gt;
+        &lt;&lt;link &quot;Read the Brochures&quot;&gt;&gt;
+        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
+            	&lt;&lt;include &quot;Read the Brochures&quot;&gt;&gt;
+        	&lt;&lt;/replace&gt;&gt;
+    	&lt;&lt;/link&gt;&gt;&lt;br&gt;
+        &lt;&lt;link &quot;Wait for a while&quot;&gt;&gt;
+        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
             	&lt;&lt;include &quot;Wait&quot;&gt;&gt;
         	&lt;&lt;/replace&gt;&gt;
    		&lt;&lt;/link&gt;&gt;
@@ -213,14 +225,17 @@ A few moments later the door behind the desk opens and you see a fennec fox. He 
 
 &lt;&lt;else&gt;&gt;
   &lt;&lt;if $rejectAllAgain &lt; 1&gt;&gt;
-     &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;AllEndings&quot;)&gt;&gt;
+     &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Clone&quot;)&gt;&gt;
      You approach the desk and ring the bell for service. The indistinct voice on the phone suddenly quiets, then a few moments later a familiar fennec appears at the door. &quot;Oh hey!&quot; he exclaims. &quot;You&#39;re back for more, eh? Well, come on in!&quot;
        &lt;br&gt;&lt;br&gt;[[Continue|ReturningEmployee]] 
      &lt;&lt;else&gt;&gt;
-     You approach the desk and ring the bell for service. A few moments later, Cassel opens the door. &quot;You&#39;re back... again??? Listen, I&#39;m sorry to tell you this, but I really don&#39;t have any more positions for you. You&#39;ve done them all! Go... retire! You&#39;ve spent so much time as &lt;i&gt;things&lt;/i&gt; that I&#39;m sure you haven&#39;t spent any of the money gathering in your bank account. Live your life! Or go enroll in the university. I&#39;ve heard they have an annual TF Tag game that you might like.&quot; With an apologetic smile, he shows you to the door, and flips the sign from &quot;OPEN&quot; to &quot;CLOSED&quot;.
+     You approach the desk and ring the bell for service. A few moments later, Cassel opens the door.
+     &lt;br&gt;&lt;br&gt;&quot;You&#39;re back... again??? Listen, I&#39;m sorry to tell you this, but I really don&#39;t have any more positions for you. You&#39;ve done them all! Go... retire! You&#39;ve spent so much time as &lt;i&gt;things&lt;/i&gt; that I&#39;m sure you haven&#39;t spent any of the money gathering in your bank account. Live your life! Or go enroll in the university. I&#39;ve heard they have an annual TF Tag game that you might like.&quot;
+     
+     &lt;br&gt;&lt;br&gt;With an apologetic smile, he shows you to the door, and flips the sign from &quot;OPEN&quot; to &quot;CLOSED&quot;.&lt;br&gt;&lt;br&gt;
      
      &lt;b&gt;The End.&lt;/b&gt;
-     &lt;br&gt;&lt;br&gt;[[Continue|Main Menu]]
+     &lt;br&gt;&lt;br&gt;[[Continue|Main Menu]] &lt;&lt;set $unlockedSecret = 2&gt;&gt;
      &lt;&lt;/if&gt;&gt;
   &lt;&lt;else&gt;&gt;
   You approach the desk and ring the bell for service. A few moments later, a familiar fennec appears at the door. He raises an eyebrow. &quot;That desperate, huh? Alright, let&#39;s try again.&quot; He gestures for you to come inside.
@@ -308,8 +323,8 @@ A tiger named Striker was hired internally full-time as an oak armchair, a $npc1
 	&lt;br&gt;[[Continue|end_Security]]
     &lt;&lt;set $pcOn to false, $readInbox to false&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Wait" tags="" position="250,650" size="100,100">&lt;&lt;if $jobsTaken &lt; 1&gt;&gt;
-You sit and wait for a while. Eventually the voice on the phone stops talking, and comes. Hey welcome, come on in!
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="8" name="Wait" tags="" position="250,775" size="100,100">&lt;&lt;if $unlockedSecret == 0&gt;&gt;&lt;&lt;if $jobsTaken &lt; 1&gt;&gt;
+You sit and wait for a while. Eventually the voice on the phone stops talking, and a fennec fox appears at the door behind the secretary&#39;s desk. &quot;Oh welcome!&quot; he exclaims. &quot;You&#39;re here for a job, eh? Well, come on in!&quot;
 
 [[Enter]]
 [[On second thought...|Leave]]
@@ -318,25 +333,15 @@ You sit and wait for a while. Eventually the voice on the phone stops talking, a
 
 [[Enter|ReturningEmployee]]
 [[On second thought...|Leave]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Look at Magazines and Brochures" tags="" position="250,775" size="100,100">You thumb through the magazines and brochures. The magazines are all several months out of date and are for various topics. The brochures are about the &lt;i&gt;New You Temp Agency&lt;/i&gt;.
+&lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;You sit and wait for a while. Eventually the voice on the phone stops talking, and a familiar fennec appears at the door.
 
-&lt;div id=&quot;waiting-options&quot;&gt;
-    	&lt;&lt;link &quot;Read the Magazines&quot;&gt;&gt;
-        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
-            	&lt;&lt;include &quot;Read the Magazines&quot;&gt;&gt;
-        	&lt;&lt;/replace&gt;&gt;
-    	&lt;&lt;/link&gt;&gt;
-        &lt;&lt;link &quot;Read the Brochures&quot;&gt;&gt;
-        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
-            	&lt;&lt;include &quot;Read the Brochures&quot;&gt;&gt;
-        	&lt;&lt;/replace&gt;&gt;
-    	&lt;&lt;/link&gt;&gt;
-        &lt;&lt;link &quot;Keep Waiting&quot;&gt;&gt;
-        	&lt;&lt;replace &quot;#waiting-options&quot; t8n&gt;&gt;
-            	&lt;&lt;include &quot;Wait&quot;&gt;&gt;
-        	&lt;&lt;/replace&gt;&gt;
-   		&lt;&lt;/link&gt;&gt;
-&lt;/div&gt;</tw-passagedata><tw-passagedata pid="10" name="Enter" tags="" position="625,725" size="100,100">&lt;&lt;nobr&gt;&gt;    &lt;&lt;widget &quot;giveResume&quot;&gt;&gt;
+&quot;You&#39;re back... again??? Listen, I&#39;m sorry to tell you this, but I really don&#39;t have any more positions for you. You&#39;ve done them all! Go... retire! You&#39;ve spent so much time as &lt;i&gt;things&lt;/i&gt; that I&#39;m sure you haven&#39;t spent any of the money gathering in your bank account. Live your life! Or go enroll in the university. I&#39;ve heard they have an annual TF Tag game that you might like.&quot;
+     
+     With an apologetic smile, he shows you to the door, and flips the sign from &quot;OPEN&quot; to &quot;CLOSED&quot;.
+     
+     &lt;b&gt;The End!&lt;/b&gt;
+     &lt;br&gt;&lt;br&gt;[[Continue|Main Menu]]&lt;&lt;set $unlockedSecret = 2&gt;&gt;
+     &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="9" name="Enter" tags="" position="625,725" size="100,100">&lt;&lt;nobr&gt;&gt;    &lt;&lt;widget &quot;giveResume&quot;&gt;&gt;
 	&lt;div id=&quot;dialogue-options&quot;&gt;
     	&lt;br&gt;&lt;&lt;link &quot;Hand it to him&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
@@ -387,7 +392,7 @@ You enter the manager&#39;s office. He gestures for you to take a seat and you s
     	&lt;&lt;/link&gt;&gt;
 	&lt;/div&gt;
 
-</tw-passagedata><tw-passagedata pid="11" name="Begin the Interview" tags="" position="675,850" size="100,100">He takes out a clipboard and picks up his pen. &quot;Let&#39;s begin!&quot; he announces. &quot;There are a few different places looking for a new hire, I&#39;m going to ask you a few questions, and depending on your answers, I can recommend somewhere to send you. Some of these questions might be a bit strange, but trust me, it all helps me get a good picture of what you&#39;re like.&quot;
+</tw-passagedata><tw-passagedata pid="10" name="Begin the Interview" tags="" position="675,850" size="100,100">He takes out a clipboard and picks up his pen. &quot;Let&#39;s begin!&quot; he announces. &quot;There are a few different places looking for a new hire, I&#39;m going to ask you a few questions, and depending on your answers, I can recommend somewhere to send you. Some of these questions might be a bit strange, but trust me, it all helps me get a good picture of what you&#39;re like.&quot;
 
 Looking at you seriously, he adds, &quot;Now, the final decision is up to you, so if you don&#39;t think the job would be a good fit, you&#39;re welcome to turn it down and we can see what else you qualify for. Just answer honestly and I&#39;m sure we&#39;ll find a place for you. Got it?&quot;
 
@@ -396,10 +401,13 @@ You nod.
 &quot;Alright! Question one:&quot;
 &lt;&lt;include &quot;InterviewSetup&quot;&gt;&gt;
 &lt;&lt;include &quot;InterviewQuestions&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="12" name="To-Do List" tags="" position="100,425" size="100,100">- Determine endings
+</tw-passagedata><tw-passagedata pid="11" name="To-Do List" tags="" position="100,425" size="100,100">- Determine endings
 - Write endings
 - Finish writing questions
-- Rewrite secondary text</tw-passagedata><tw-passagedata pid="13" name="Endings List" tags="" position="100,550" size="100,100">Endings:
+- Rewrite secondary text
+- Make it so you don&#39;t have to do final interview to get Clone ending
+- Go to &quot;no endings left&quot; from other locations
+- Game gets softlocked if you achieve Clone ending but not other secret endings</tw-passagedata><tw-passagedata pid="12" name="Endings List" tags="" position="100,550" size="100,100">Endings:
 
 1. Gym - Socks
 2. Bank - ATM
@@ -418,15 +426,15 @@ You nod.
 15. Shopping Centre - Mannequin
 (Secret) Temp Agency - Security Camera
 (Secret) Temp Agency - Kinetic Toy
-(Secret) Temp Agency - ???
-(Secret) Temp Agency - Revolving Door</tw-passagedata><tw-passagedata pid="14" name="PassageFooter" tags="" position="525,150" size="100,100"></tw-passagedata><tw-passagedata pid="15" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
+(Secret) Temp Agency - Cassel Clone
+(Secret) Temp Agency - Revolving Door</tw-passagedata><tw-passagedata pid="13" name="PassageFooter" tags="" position="525,150" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
       &lt;&lt;displayRandomQuestion&gt;&gt;
       &lt;&lt;set $questionCount+=1&gt;&gt;
   &lt;&lt;else&gt;&gt;
       He smiles and puts down the clipboard. &quot;I think I have enough to go on,&quot; he says.&lt;br&gt;
       &lt;&lt;include &quot;DecideFate&quot;&gt;&gt;
-  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
-&lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0&gt;&gt;
+  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
+&lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0&gt;&gt;
 
 &lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0&gt;&gt;
 
@@ -471,21 +479,20 @@ $Endings.EndingMannequin = { name: &quot;Mannequin&quot;,  score: $scoreMannequi
   if (State.variables.currentEndingIndex === undefined) {
     State.variables.currentEndingIndex = 0;
   }
-&gt;&gt;&lt;&lt;/silently&gt;&gt;&lt;&lt;if _sortedEndings.length === 0&gt;&gt;You&#39;ve already seen all possible endings!
-&lt;&lt;button &quot;Continue&quot;&gt;&gt;&lt;&lt;goto &quot;end_Secret&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;if $currentEndingIndex &gt;= _sortedEndings.length&gt;&gt;You&#39;ve seen all possible endings and rejected them all!
+&gt;&gt;&lt;&lt;/silently&gt;&gt;&lt;&lt;if _sortedEndings.length === 0&gt;&gt;&lt;&lt;button &quot;Continue&quot;&gt;&gt;&lt;&lt;goto &quot;end_Secret&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;else&gt;&gt;&lt;&lt;if $currentEndingIndex &gt;= _sortedEndings.length&gt;&gt;He looks down at his clipboard again and frowns. &quot;Actually, y&#39;know what? I really don&#39;t have anything else for you.&quot;
 &lt;&lt;button &quot;Continue&quot;&gt;&gt;&lt;&lt;set $currentEndingIndex = 0&gt;&gt;&lt;&lt;goto &quot;end_Reject&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;&lt;else&gt;&gt;&lt;div id=&quot;ending-section&quot;&gt;&lt;&lt;genJobs _sortedEndings[$currentEndingIndex].name&gt;&gt;
 &lt;div style=&quot;margin-top: 15px;&quot;&gt;&lt;&lt;button &quot;Take the Job&quot;&gt;&gt;&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;run 
   State.variables.priorEndings.push(State.temporary.sortedEndings[State.variables.currentEndingIndex]);
   const currentEndingName = State.temporary.sortedEndings[State.variables.currentEndingIndex].name;
 &gt;&gt;&lt;&lt;goto _sortedEndings[$currentEndingIndex].name&gt;&gt;&lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;Reject the Job&quot;&gt;&gt;&lt;&lt;set $currentEndingIndex++&gt;&gt;&lt;&lt;set $rejectCount += 1&gt;&gt;&lt;&lt;goto &quot;DecideFate&quot;&gt;&gt;&lt;&lt;/button&gt;&gt;&lt;/div&gt;&lt;/div&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;widget &quot;showStats&quot;&gt;&gt;
+&lt;&lt;widget &quot;showStats&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
     &lt;&lt;if $ezMode&gt;&gt;
-        &lt;span class=&quot;stats-display&quot;&gt;&lt;&lt;nobr&gt;&gt;
+        &lt;span class=&quot;stats-display&quot;&gt;
             &lt;&lt;for _stat range $args&gt;&gt;
                 &lt;&lt;set _displayStat = _stat.replace(/^score/, &quot;&quot;)&gt;&gt;
                 &lt;&lt;print _displayStat&gt;&gt; &lt;b&gt;↑&lt;/b&gt; 
-            &lt;&lt;/for&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/widget&gt;&gt;
+            &lt;&lt;/for&gt;&gt;&lt;/span&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;
 
 &lt;&lt;widget &quot;CheckUnlocked&quot;&gt;&gt;&lt;&lt;nobr&gt;&gt;
     &lt;&lt;if $priorEndings.some(ending =&gt; ending.name === $args[0])&gt;&gt;
@@ -556,15 +563,15 @@ window.updateScores = function(answerNum, question) {
 &lt;&lt;set $jobClues = {
     &quot;Socks&quot;: &quot;The Pump &amp; Go Gym is looking for someone to become their lead trainer&#39;s new socks.&quot;,
     &quot;Coffee Machine&quot;: &quot;The Ejaculatte Coffee shop is looking for someone to replace their espresso machine.&quot;,
-    &quot;Fursuit&quot;: &quot;A private citizen is looking to acquire a new fursuit for an upcoming convention.&quot;,
+    &quot;Fursuit&quot;: &quot;A client is looking to acquire a new fursuit for an upcoming convention.&quot;,
     &quot;ATM&quot;: &quot;The Spank Bank needs a new ATM to replace one of their aging machines.&quot;,
-    &quot;Beachball&quot;: &quot;A private citizen wants a unique beachball for some fun in the sun.&quot;,
-    &quot;Statue&quot;: &quot;The Artsy Fartsy Museum wants to acquire a new statue to headline a new exhibit.&quot;,
+    &quot;Beachball&quot;: &quot;A client wants a unique beachball for some fun in the sun.&quot;,
+    &quot;Statue&quot;: &quot;The city museum wants to acquire a new statue to headline a new exhibit.&quot;,
     &quot;Ice Sculpture&quot;: &quot;The Ditcher, Quicke &amp; Hyde Law Firm has an upcoming company function and wants an ice sculpture centerpiece.&quot;,
     &quot;Standee&quot;: &quot;The Grottoes &amp; Gremlins Comic Shop wants to drum up business with a new cardboard standee outside their shop.&quot;,
     &quot;Rubber Drone&quot;: &quot;HIVE Corp. is seeking new rubber drones to join their ranks.&quot;,
     &quot;Underwear&quot;: &quot;A university student needs a comfy pair of underwear to last him the school year.&quot;,
-    &quot;Pup Gear&quot;: &quot;A private citizen is looking for some new pup gear to wear to the club.&quot;,
+    &quot;Pup Gear&quot;: &quot;A client is looking for some new pup gear to wear to the club.&quot;,
     &quot;Baseball Bat&quot;: &quot;A notable athlete wants to replace his baseball bat with a unique and durable model.&quot;,
     &quot;Tubeman&quot;: &quot;Auto von Biskmark&#39;s Gently-Used Autos is looking to dazzle potential new customers with a waving inflatable tubeman.&quot;,
     &quot;Mannequin&quot;: &quot;Sew it Would Seam would like to acquire a new mannequin for their shop display.&quot;,
@@ -646,12 +653,35 @@ window.updateScores = function(answerNum, question) {
     &lt;&lt;set $banterPlayer = $banterPlayerList.random()&gt;&gt;
     &lt;&lt;set $banterManager = $banterManagerList.random()&gt;&gt;
     
-    &lt;&lt;print $banterPlayer&gt;&gt; &lt;&lt;print $banterManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Chair" tags="ending" position="925,375" size="100,100">This is the Chair ending.
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="18" name="ATM" tags="ending" position="925,475" size="100,100">This is the ATM ending.
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="Standee" tags="ending" position="925,575" size="100,100">This is the standee ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="20" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
-&lt;&lt;if $rejectCount &gt;= 6&gt;&gt;
-&quot;Fine! You can&#39;t make up your mind? I&#39;ve got a job for you!&quot;
+    &lt;&lt;print $banterPlayer&gt;&gt; &lt;&lt;print $banterManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Chair" tags="ending-done" position="925,375" size="100,100">&lt;h2&gt;Ending - Chair&lt;/h2&gt;
+Cassel claps his hands together. &quot;Fantastic! It&#39;s always nice hiring in-house.&quot; He pulls out some paperwork, scribbles a few things, and then hands you a pen to sign it. &quot;The contract will be for a year,&quot; he tells you as you sign the papers, &quot;and your pay will be waiting for you when it&#39;s over. Now, if you wouldn&#39;t mind...&quot; He gets up and gestures toward an empty space in the middle of the room. &quot;If you could just stand over there and remove your clothes (otherwise they may rip).&quot;
+
+Obligingly, you stand up and go where he&#39;s pointed. Feeling a bit self-conscious, you strip down, tossing your clothes off to the side. Almost instantly, you forget about your awkwardness as your body starts to feel quite strange.
+
+Your feet begin to darken and change shape, shrinking and turning round as they reform into wheels. This throws off your sense of balance, and you fall backwards, only to land in a sitting position as your tail splits and turns into two more chair legs with wheels on the end. With your momentum, you roll back a little across the room.
+
+As you sit, your lap begins flattening out. Your upper legs merge together and puff out, becoming a plush seat. Your cock, laying on top of this new surface, begins to stiffen but can&#39;t grow too much before it too flattens out, merging into the seat of the chair.
+
+You notice that you&#39;ve lost control of your arms, and they stick foward awkwardly, but only for a moment until they begin reshaping and becoming the arm rests of the chair.
+
+With some difficulty, you look down at your chest as it flattens out into the back of the chair changing color and texture until it&#39;s a comfortable, plush red, and then your view is forced fowards as your head and face become the headrest. You give an excited little peep as the changes finalize, then move no more.
+
+&quot;Ah, wonderful!&quot; Cassel says, approaching you. He grabs you by where your shoulders used to be and rolls you over to his desk, pushing his old chair out of the way with his foot. &quot;You look nice and comfortable. Let&#39;s see, shall we?&quot;
+
+He sits down on your lap, and if you were capable of moaning, you would. Your cock flattened down onto the seat, and as he sits on you, you can feel his weight pressing and rubbing against the part of the seat that was your cock. Every little adjustment he makes as he gets comfortable feels really good, and you inwardly curse that you know you won&#39;t be able to cum or take care of this feeling until you get turned back.
+
+&quot;Ahh, that&#39;s nice,&quot; he says, scooching you forward closer to the desk so he can start doing some paperwork. &quot;I&#39;m definitely gonna spend a lot of time sitting on you over this next year...&quot;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="17" name="ATM" tags="ending" position="925,475" size="100,100">&lt;h2&gt;Ending - ATM&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="18" name="Standee" tags="ending" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+&lt;&lt;if $rejectCount &gt;= 6&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
+The fennec sets down his pencil and pinches the bridge of his snout in exasperation. &quot;You can&#39;t make up your mind? Well, I&#39;ve got a job for you!&quot;
 
 &lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
 
@@ -659,8 +689,8 @@ window.updateScores = function(answerNum, question) {
   &lt;&lt;set $priorEndings.push({name: &quot;Desktop Toy&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $jobsTaken+=1&gt;&gt;
-&lt;&lt;else&gt;&gt;
-&quot;Well, I don&#39;t have anything else for you. Except...&quot;
+&lt;&lt;else&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
+&quot;Except...&quot; He pauses for a moment, thinking. &quot;Aha! I &lt;i&gt;do&lt;/i&gt; have a job for you!&quot;
 
 &lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
 
@@ -672,37 +702,124 @@ window.updateScores = function(answerNum, question) {
 
 &lt;&lt;else&gt;&gt;
 &lt;&lt;if $rejectCount &gt;= 6&gt;&gt;
-&quot;You really are quite picky, you know? I&#39;m tempted to make you my desktop toy again, but I can&#39;t be bothered. Begone, go apply for a regular job somewhere.&quot;
+The fennec looks very annoyed. &quot;You really are quite picky, you know? I&#39;m tempted to make you my desktop toy again, but I can&#39;t be bothered. Begone! Go apply for a regular job somewhere.&quot;
+
+He shoos you out of his office and you head home, dejected.
 [[Try Again!|Main]]
 &lt;&lt;set $rejectAllAgain+=1&gt;&gt;
 &lt;&lt;else&gt;&gt;
-I&#39;m afraid I haven&#39;t got anything else for you at this time, unless you&#39;d like to be my desktop toy again?
+The fennec shrugs his shoulders. &quot;Unless you&#39;d like to be my desktop toy again?&quot; He looks at you and tilts his head.
 	&lt;div id=&quot;dialogue-options&quot;&gt;
-    	&lt;&lt;link &quot;Accept&quot;&gt;&gt;
+    	&lt;&lt;button &quot;Accept Job&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
             	&lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
         	&lt;&lt;/replace&gt;&gt;
-   		&lt;&lt;/link&gt;&gt;
-    	&lt;&lt;link &quot;Reject&quot;&gt;&gt;
+   		&lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;Reject Job&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
             	You thank him for his time and, with a shake of his hand, leave.
                 [[Play Again?|Main]]
         	&lt;&lt;/replace&gt;&gt;
-    	&lt;&lt;/link&gt;&gt;
+    	&lt;&lt;/button&gt;&gt;
 	&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="21" name="Statue" tags="ending" position="1025,375" size="100,100">This is the Statue ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Baseball Bat" tags="ending" position="1025,475" size="100,100">This is the bat ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Tubeman" tags="ending" position="1025,575" size="100,100">This is the tubeman ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Ice Sculpture" tags="ending" position="975,675" size="100,100">This is the ice sculpture ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Underwear" tags="ending" position="1125,375" size="100,100">This is the underwear ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Socks" tags="ending" position="1125,475" size="100,100">This is the socks ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Pup Gear" tags="ending" position="1125,575" size="100,100">This is the pup gear ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="Beachball" tags="ending" position="1075,675" size="100,100">This is the beachball ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="Rubber Drone" tags="ending" position="1225,375" size="100,100">This is the drone ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="30" name="Fursuit" tags="ending" position="1225,475" size="100,100">This is the fursuit ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="31" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">This is the coffee machine ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="32" name="end_Security" tags="" position="1025,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Statue" tags="ending-done" position="1025,375" size="100,100">&lt;h2&gt;Ending - Statue&lt;/h2&gt;
+Cassel beams. &quot;Fantastic!&quot; he says, and produces some paperwork from a drawer in his desk. &quot;Just sign these, and then head on over to the museum. I&#39;ll let them know you&#39;re coming.&quot;
+
+You sign the paperwork and dutifully make your way over to the museum, where you&#39;re met by an imposing but friendly rhino who leads you through the museum to a back room.
+
+&quot;Right,&quot; he says, his voice booming. &quot;First of all I&#39;ll need you to strip. Yep, everything. You can leave your clothes over there.&quot; You do as you&#39;re told and stand, shivering, in the slightly-cold room. He gestures to a stone plinth and you get up on it.
+
+&quot;You&#39;re gonna be the main piece for an exhibit, so you gotta be in an interesting pose. Let&#39;s see...&quot; he thinks for a moment. &quot;How about this?&quot; He strikes a heroic-looking pose and you try not to laugh. &quot;Hmm, yeah it&#39;s a bit cliche. Okay, try this.&quot; He strikes another pose, still heroic but less campy. You mirror the pose and he nods approvingly. &quot;Perfect!&quot; he booms. &quot;Now give a heroic smile aaaaand... hold it right like that!&quot;
+
+You discover suddenly that, try as you might, you can&#39;t &lt;i&gt;not&lt;/i&gt; hold the pose. Your body is suddenly frozen in place. Your toes begin to go numb and you angle your eyes down as best you can and are just barely able to see that the fur on your feet has taken on a marbled texture, glistening slightly in the light of this storage room.
+
+As you watch, the marble texture begins to creep up your legs. They begin to feel heavy, but only moments later it&#39;s replaced with a numbness that fades to nothing at all. It is such a strange sensation but it feels kind of good, and in spite of yourself you start growing hard as the stone moves up your thighs.
+
+&quot;Oh, dammit,&quot; the rhino curses, as your cock and balls petrify into a permanent erection. &quot;We&#39;re gonna have to cover that up somehow.&quot;
+
+You would laugh, but your face is stuck in a heroic smile and you can only manage a couple sharp exhales of breath.
+
+Your torso slowly turns to marble, and you discover with pleasure that the changes give you very chiseled - pun intended - abs. The change spreads along your shoulders to your arms, pumping up your biceps to heroic proportions as they turn white with grey marbling.
+
+You have just enough sense to look up before your face petrifies, locking your vision forward. You&#39;d have been really annoyed if you were stuck looking down at your rock hard erection for the next year.
+
+The change completes, and the rhino takes a walk around you, whistling in appreciation. &quot;Looking good! Apart from the... unfortunate vulgarity... you&#39;re gonna look perfect at the exhibit! I&#39;ll get the boys to move you into Hall A after they&#39;re back from lunch.&quot;
+
+He gives you a slap on your solid, toned ass and leaves the storage room. Once the door shuts the storage room is completely still, and you find it surprisingly difficult to keep track of time.
+
+Some time later some people come in and carefully move you, repositioning you in an otherwise empty hall that, over time, fills up with other sculptures and pieces of artwork.
+
+Someone hangs a piece of fabric off your erection, but it only serves to draw attention to it, so eventually they just leave it off and add a line to the plaque below you that explains your erection as being the &quot;furious pumping of blood in the hero&#39;s veins&quot;.
+
+The exhibit opens eventually, and you stare ahead unmovingly as crowds pass by. Some stop and appreciate your form, others barely cast a second glance, others still ignore the &quot;Please keep your hands off the exhibits!&quot; sign and wrap their paws around your marble knob, fondling the stone orbs dangling below.
+
+As the day ends, the crowds thin, until you&#39;re left alone in the dark exhibit hall, time blurring together as the dark hours pass until day comes, the museum opens, and the crowds come again. All the while you stand, immobile, just a statue for them to see.
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Baseball Bat" tags="ending" position="1025,475" size="100,100">&lt;h2&gt;Ending - Baseball Bat&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Tubeman" tags="ending" position="1025,575" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Ice Sculpture" tags="ending" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Underwear" tags="ending-done" position="1125,375" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
+Cassel nods and smiles. &quot;Fantastic!&quot; he says. &quot;Now, you&#39;re gonna be getting real close and personal with the client for the next year, so I hope you&#39;re ready for that!&quot; He produces some paperwork from his desk and passes you a pen to sign.
+
+Once the paperwork is out of the way, he makes a phone call and bids you to wait for a few minutes.
+
+Eventually there&#39;s a knock at the door and Cassel welcomes in a muscular, handsome tiger. &quot;This will be your employer for the next year.&quot; He gives the tiger a nod. &quot;I&#39;ll wait outside and give you two some privacy.&quot;
+
+The tiger smirks. &quot;Nice to meet ya.&quot; He puts out a paw and you shake it. &quot;When I put in a request for some new underwear, I&#39;ll admit that I didn&#39;t think they&#39;d ever give me a call back. But I think you&#39;ll do just nicely.&quot; His smile widens as he looks you up and down.
+
+&quot;But underwear doesn&#39;t wear clothing itself, so... off with you!&quot; He gestures at your clothes. You nod and strip for him and he whistles appreciatively. He undoes his pants and slips out of them. You notice that he&#39;s going commando, and his cock and balls flop out as he opens his pants.
+
+&quot;Like what you see?&quot; he asks, one eyebrow cocked. &quot;Go on, get a closer look.&quot;
+
+You approach him and drop to your knees, feeling almost compelled to get your face right into that tiger crotch. You take a big inhale and let out a moan. He has an intoxicating smell.
+
+&quot;Yeah, that&#39;s right,&quot; the tiger says, grabbing the back of your head and pressing your snout deeper into his crotch. &quot;Get right in there.&quot;
+
+You wrap your arms around his waist to steady yourself and breathe in deeply. Suddenly, you feel that your fingers, which were interlaced together just above his ass, no longer feel right. You try to pull your hands back, but they seem to be stuck together.
+
+Your arms start to lose strength as they flatten out, becoming nothing more than an elastic band around the tiger&#39;s striped waist. As he holds your head and presses it into his crotch, your face begins to deform, hugging the shape of his crotch more tightly.
+
+There&#39;s a curious sensation as your legs slip out from under you, curling up between his legs as they flatten and form the fabric that covers his ass. Your own cock is, nothing more than fabric itself now, is wedged just below his crotch, and you can feel his heavy, fuzzy balls rubbing against it.
+
+You try to moan again, but have lost all ability to talk or move. In moments, you&#39;ve become nothing more than a pair of underwear tightly wrapped around the tiger&#39;s sexiest areas.
+
+Despite this, you&#39;re still able to smell his musk and feel the warmth and weight of his cock and balls pressing against what was once your face. It&#39;s heavenly.
+
+The tiger gropes himself through you, and you feel him beginning to stiffen within you. A bead of precum drips out of his cock and soaks into your fabric, tasting incredible.
+
+&quot;Mmmmff, you do feel good,&quot; the tiger purrs, adjusting you. He touches himself a little bit more, then pulls his pants back on, trapping you between the warmth of his cock and the rough texture of his jeans.
+
+You hear Cassel return to the room, and he exchanges some words with the tiger. Then the tiger is moving, his gait stretching your fabric back and forth with each step.
+
+All the while you&#39;ve got a faceful of tiger crotch, and you can&#39;t think of anywhere else you&#39;d rather be. It&#39;s gonna be a great year. You hope that he wears you often, and prays he remembers to wash you.
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Socks" tags="ending" position="1125,475" size="100,100">&lt;h2&gt;Ending - Socks&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Pup Gear" tags="ending" position="1125,575" size="100,100">&lt;h2&gt;Ending - Pup Gear&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Beachball" tags="ending" position="1075,675" size="100,100">&lt;h2&gt;Ending - Beachball&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="Rubber Drone" tags="ending" position="1225,375" size="100,100">&lt;h2&gt;Ending - Drone&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="Fursuit" tags="ending" position="1225,475" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="30" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="31" name="end_Security" tags="" position="1025,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
 The door opens, catching you off guard. &quot;Snooping around, eh?&quot; a fennec fox says, his hands on his hips.
 
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
@@ -714,17 +831,24 @@ The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;
 
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="end_Secret" tags="" position="1225,800" size="100,100">&lt;&lt;include &quot;AllEndings&quot;&gt;&gt;
-&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;AllEndings&quot;)&gt;&gt;
-  &lt;&lt;set $priorEndings.push({name: &quot;AllEndings&quot;, other_properties: &quot;values&quot;})&gt;&gt;
+&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="end_Secret" tags="" position="1225,800" size="100,100">&lt;&lt;include &quot;Clone&quot;&gt;&gt;
+&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Clone&quot;)&gt;&gt;
+  &lt;&lt;set $priorEndings.push({name: &quot;Clone&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $rejectAllAgain = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the New You Temp Agency, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the New You Temp Agency provides dedicated workers for short- or long-term needs!&quot;
+&lt;&lt;set $rejectAllAgain = 0&gt;&gt;
+&lt;&lt;set $unlockedSecret = 1&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the &lt;i&gt;New You Temp Agency&lt;/i&gt;, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the &lt;i&gt;New You Temp Agency&lt;/i&gt; provides dedicated workers for short- or long-term needs!&quot;
 
-As you read, the voice on the phone stops and the door opens. He welcomes you inside.
+&lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
+
+&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.&lt;&lt;else&gt;&gt;As you read the brochure, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
+
+&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="35" name="Mannequin" tags="ending" position="1175,675" size="100,100">This is the mannequin ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="36" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
+[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="34" name="Mannequin" tags="ending" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="35" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
 You enter Cassel&#39;s office. He gestures for you to take a seat and you go to sit on the nicely-carved oak chair in front of his desk. 
 &lt;&lt;if $pcOn is true&gt;&gt;
 	With a jolt, you realize that it&#39;s the tiger whose employee file you were reading on the computer... and you&#39;re about to sit on him! As you lower yourself down onto the surprisingly comfortable seat, you hope he doesn&#39;t mind your ass on him.
@@ -740,18 +864,22 @@ You enter Cassel&#39;s office. He gestures for you to take a seat and you go to 
     	&lt;&lt;link &quot;\&quot;Sure!\&quot;&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
             	&lt;&lt;set $ezMode to true&gt;&gt;
-                &quot;Sure!&quot; He nods.
+                &quot;Sure!&quot; 
+                
+                He nods.
                 [[Begin the Interview]]
         	&lt;&lt;/replace&gt;&gt;
    		&lt;&lt;/link&gt;&gt;
     	&lt;&lt;link &quot;\&quot;No thanks.\&quot;&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
             	&lt;&lt;set $ezMode to false&gt;&gt;
-                &quot;No thanks.&quot; He nods. &quot;Enjoy the mystery, eh?&quot;
+                &quot;No thanks.&quot;
+                
+                He nods. &quot;Enjoy the mystery, eh?&quot;
                 [[Begin the Interview]]
         	&lt;&lt;/replace&gt;&gt;
     	&lt;&lt;/link&gt;&gt;
-	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="37" name="EndingGallery" tags="" position="675,50" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
+	&lt;/div&gt;</tw-passagedata><tw-passagedata pid="36" name="EndingGallery" tags="" position="675,50" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
 Here you can view the endings that you&#39;ve unlocked!
 
 &lt;table style=&quot;width:100%&quot; class=&quot;endings-table&quot; &gt;
@@ -786,13 +914,13 @@ Here you can view the endings that you&#39;ve unlocked!
     &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;CheckUnlocked &quot;Desktop Toy&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
     &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;CheckUnlocked &quot;Security Camera&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
     &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;CheckUnlocked &quot;Revolving Door&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
-    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;CheckUnlocked &quot;AllEndings&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;&lt;CheckUnlocked &quot;Clone&quot;&gt;&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt; 
 
-[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="38" name="Bug List" tags="" position="100,675" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
-- Spaces between answers in ezMode
+[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="37" name="Bug List" tags="" position="100,675" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
 
+(FIXED) - Spaces between answers in ezMode
 (FIXED) - Huge space before ending name is revealed
 (FIXED) - Suddenly priorEndings.name isn&#39;t working
 		(can&#39;t use &lt;&lt;nobr&gt;&gt; in widget, oddly)
@@ -802,12 +930,12 @@ Here you can view the endings that you&#39;ve unlocked!
 		(achieved endings aren&#39;t shown in list so their earned points don&#39;t appear)
 (FIXED) Reject All ending comes up simultaneous with Secret Ending
 (FIXED) - Questions can come up repeatedly
-(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="39" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
+(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="38" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;set $firstOffer to true&gt;&gt;
 	&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;rejectJobBanter&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
 
 &lt;&lt;set $Questions.Q1 = { 
     question: &quot;Where do you see yourself in five years?\&quot;&quot;, 
@@ -1077,18 +1205,18 @@ $Questions.Q2 = {
     &lt;&lt;nobr&gt;&gt;&lt;&lt;showStats _currentQuestion.score1 _currentQuestion.score2&gt;&gt;&lt;&lt;link _currentQuestion.ans1&gt;&gt;
         &lt;&lt;set $currentAnswer = 1&gt;&gt;
         &lt;&lt;goto &quot;ProcessAnswer&quot;&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
+    &lt;&lt;/link&gt;&gt;&lt;br&gt;
     &lt;&lt;showStats _currentQuestion.score3 _currentQuestion.score4&gt;&gt;&lt;&lt;link _currentQuestion.ans2&gt;&gt;
         &lt;&lt;set $currentAnswer = 2&gt;&gt;
         &lt;&lt;goto &quot;ProcessAnswer&quot;&gt;&gt;
-    &lt;&lt;/link&gt;&gt;
+    &lt;&lt;/link&gt;&gt;&lt;br&gt;
     &lt;&lt;showStats _currentQuestion.score5 _currentQuestion.score6&gt;&gt;&lt;&lt;link _currentQuestion.ans3&gt;&gt;
         &lt;&lt;set $currentAnswer = 3&gt;&gt;
         &lt;&lt;goto &quot;ProcessAnswer&quot;&gt;&gt;
     &lt;&lt;/link&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
 &lt;&lt;set _currentQuestion = $Questions[$currentQuestionKey]&gt;&gt;
 
 &lt;&lt;if $currentAnswer == 1&gt;&gt;
@@ -1168,12 +1296,38 @@ $Questions.Q2 = {
     &lt;&lt;set $scoreMannequin += 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Desktop Toy" tags="ending" position="925,900" size="100,100">You turn into a desktop kinetic toy.
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Desktop Toy" tags="ending" position="925,900" size="100,100">
+&lt;b&gt;The End!&lt;/b&gt;
+[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="42" name="Security Camera" tags="ending" position="1025,900" size="100,100">&lt;b&gt;The End!&lt;/b&gt;
+[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="43" name="Clone" tags="ending-done" position="1225,900" size="100,100">&lt;h2&gt;Ending - Cassel Clone&lt;/h2&gt;
+Cassel steeples his fingers and rests his chin on them. &quot;I&#39;ve been doing this for a long time,&quot; he says, &quot;and I rarely get to take any time off for myself.&quot;
 
-[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="43" name="Security Camera" tags="ending" position="1025,900" size="100,100">This is the security camera ending
+He gestures at you. &quot;And you, well, you&#39;ve been such a reliable employee these past many years. A statue, socks, my chair, and more besides. Anywhere I send you, you do a great job. So I think I know the perfect final job for you.&quot; The fennec grins. &quot;Me!&quot;
 
-[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="44" name="AllEndings" tags="ending" position="1225,900" size="100,100">This is the super secret ending
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="45" name="Main Menu" tags="" position="525,350" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
+You get a rush of vertigo as the room seems to grow around you. But it&#39;s not growing - you&#39;re shrinking! Your clothes become baggy as you shrink down and find yourself eye level with Cassel.
+
+Looking at your paws, you watch as they change shape slightly, and your fur takes on a creamy yellow color. You reach up and feel your ears growing to frankly silly proportions, and your tail seems to inflate as it gets huge and fuzzy.
+
+You pull at the waistband of your now too-large pants and snicker as you look down them.
+
+&quot;Yeah, I may be short in stature, but I&#39;m not &lt;i&gt;all&lt;/i&gt; small,&quot; Cassel chuckles, watching you.
+
+Your snout changes shape, becoming pointier in front of your eyes, and within a few moments a perfect clone of the &lt;i&gt;New You Temp Agency&lt;/i&gt; manager sits across from the original.
+
+&quot;It&#39;s like looking in a mirror!&quot; the fennec across from you says, tilting his head. Then he hops off of his chair and gestures at you. &quot;It&#39;s all yours, kid! Or should I say... Cassel?&quot;
+
+You waddle around the desk, struggling to keep your huge, baggy pants from falling down. Cassel - the original one - laughs and goes to a wardrobe off to one side. He opens it and grabs a set of clothes in his size and tosses them to you. &quot;Here, these will fit better,&quot; he says.
+
+As you get changed, he does as well, so by the time you&#39;re wearing some respectable managerial clothing he&#39;s wearing a colorful Hawaiian shirt and a straw hat.
+
+&quot;Well!&quot; he says cheerily, &quot;Try not to run the agency into the ground while I&#39;m gone! I&#39;m gonna go take a well-earned, &lt;i&gt;long&lt;/i&gt; vacation.&quot;
+
+With a tip of his hat and a promise to send a postcard, Cassel departs, leaving you sitting in his chair, wearing his clothes, and looking exactly like him.
+
+A few minutes later, you hear the ringing of a bell and a voice calling out, &quot;Hello? I&#39;m here to apply for a job!&quot;
+
+&lt;b&gt;The End!&lt;/b&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="44" name="Main Menu" tags="" position="525,350" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
 &lt;i&gt;&lt;b&gt;Temp Agency&lt;/b&gt; is a work of gay pornographic furry fiction by Ky the Capybara, and is intended only for an 18+ audience. It contains horny inanimate transformation. Play at your peril!&lt;/i&gt;
 
 Welcome to the &lt;i&gt;New You Temp Agency&lt;/i&gt;! With you resumé in hand (you did bring one, right?), you sit down for an interview to determine where you might best be placed. But this temp agency doesn&#39;t hire out for normal jobs, so be prepared!&lt;br&gt;
@@ -1186,19 +1340,19 @@ Welcome to the &lt;i&gt;New You Temp Agency&lt;/i&gt;! With you resumé in hand 
 &lt;&lt;goto &quot;Main&quot;&gt;&gt;
 &lt;&lt;/button&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Current game version: v0.1&lt;/i&gt;
 &lt;br&gt;&lt;i&gt;I&#39;d love to hear your feedback! Drop me a message if you enjoyed the game or encountered a game-breaking bug that I need to squish! https://linktr.ee/kymaequ &lt;/i&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Walkthrough" tags="" position="675,350" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Walkthrough" tags="" position="675,350" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;
 Contains spoilers! Also will be written properly later.
 
-For the normal endings, just get the highest score in questions for that ending, or reject jobs until you see the ending you want.
+For the normal endings, just get the highest score in questions for that ending, or reject jobs until you are offered the ending you want.
 
 &lt;u&gt;&lt;b&gt;Secret Endings:&lt;/b&gt;&lt;/u&gt;
 &lt;b&gt;Desktop Toy:&lt;/b&gt; Reject all of the job offers, frustrating the manager.
 &lt;b&gt;Security Camera:&lt;/b&gt; Snoop around in the office, turning on the PC &lt;i&gt;and&lt;/i&gt; reading the message tray (in any order)
 &lt;b&gt;Revolving Door:&lt;/b&gt; From the office, leave, then start the game again. Do this repeatedly until the manager comes out.
-&lt;b&gt;AllEndings:&lt;/b&gt; (will replace this later) Achieve all the normal job endings, then go for one final interview.
+&lt;b&gt;Clone:&lt;/b&gt; Achieve all the normal job endings, then go for one final interview.
 
-[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="47" name="Changelog" tags="" position="675,250" size="100,100">No changes.
-[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="48" name="Credits" tags="" position="675,150" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
+[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="46" name="Changelog" tags="" position="675,250" size="100,100">No changes.
+[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="47" name="Credits" tags="" position="675,150" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
 &lt;b&gt;Temp Agency&lt;/b&gt; was made by Ky the Capybara 
 https://linktr.ee/kymaequ
 
@@ -1208,33 +1362,22 @@ https://twinery.org/
 Inspired by the amazing games that Blueballs makes! Check their FA for links to their stuff!
 https://www.furaffinity.net/user/blueballs
 
-[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="49" name="questionnumbers" tags="" position="100,800" size="100,100">MAX		xxxxxxxx
+[[Return|Main Menu]]</tw-passagedata><tw-passagedata pid="48" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
 
-ATM 		xxxxx
-Chair 		xxxxx
-Beachball 	xxxxx
-Statue 		xxxx
-Ice Sculpture 	xxxxx
-Standee 	xxxxxx
-Fursuit 	xxxxx
-Drone 		xxxxx
-Underwear	xxxxx
-Socks 		xxxx
-Baseball Bat 	xxxxx
-Tubeman		xxxx
-Pup Gear	xxxxx	
-Mannequin	xxx
-Coffee Mach	xxxx</tw-passagedata><tw-passagedata pid="50" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
+&lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
-As you read, the voice on the phone stops and the door opens. He welcomes you inside.
+&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.&lt;&lt;else&gt;&gt;As you browse the magaziness, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
+
+&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="51" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
+[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="49" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="52" name="Revolving Door" tags="ending" position="1125,900" size="100,100">This is the revolving door ending
+&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Revolving Door" tags="ending" position="1125,900" size="100,100">&lt;h2&gt;Ending - Revolving Door&lt;/h2&gt;
 
+&lt;b&gt;The End!&lt;/b&gt;
 [[Try Again?|Main Menu]]</tw-passagedata></tw-storydata>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
