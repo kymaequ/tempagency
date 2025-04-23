@@ -439,7 +439,7 @@ You nod.
       He smiles and puts down the clipboard. &quot;I think I have enough to go on,&quot; he says.&lt;br&gt;
       &lt;&lt;include &quot;DecideFate&quot;&gt;&gt;
   &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
-&lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0&gt;&gt;
+&lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0, $postEnding = 0&gt;&gt;
 
 &lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0&gt;&gt;
 
@@ -749,7 +749,6 @@ Though he was worried that it would be disruptive and unappreciated, the manager
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
 &lt;&lt;if $rejectCount &gt;= 6&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
 The fennec sets down his pencil and pinches the bridge of his snout in exasperation. &quot;You can&#39;t make up your mind? Well, I&#39;ve got a job for you!&quot;
-
 &lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
 
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
@@ -758,8 +757,7 @@ The fennec sets down his pencil and pinches the bridge of his snout in exasperat
 &lt;&lt;set $jobsTaken+=1&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
 &quot;Except...&quot; He pauses for a moment, thinking. &quot;Aha! I &lt;i&gt;do&lt;/i&gt; have a job for you!&quot;
-
-&lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
+&lt;&lt;set $deskToyAgain = 1&gt;&gt;&lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
 
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Desktop Toy&quot;, other_properties: &quot;values&quot;})&gt;&gt;
@@ -779,7 +777,7 @@ The fennec shrugs his shoulders. &quot;Unless you&#39;d like to be my desktop to
 	&lt;div id=&quot;dialogue-options&quot;&gt;
     	&lt;&lt;button &quot;Accept Job&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
-            	&lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
+            	&lt;&lt;set $deskToyAgain = 1&gt;&gt;&lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
         	&lt;&lt;/replace&gt;&gt;
    		&lt;&lt;/button&gt;&gt; &lt;&lt;button &quot;Reject Job&quot;&gt;&gt;
         	&lt;&lt;replace &quot;#dialogue-options&quot; t8n&gt;&gt;
@@ -969,7 +967,11 @@ Yes, you&#39;ll obey.
 
 &lt;b&gt;The End!&lt;/b&gt;
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="Fursuit" tags="ending" position="1225,475" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
-(Ending not written yet) You get turned into a fursuit
+Cassel nods and pulls out some paperwork. &quot;Glad to hear it! The client says he&#39;s got a con coming up and would love to have a full suit to wear, so I&#39;m sure you&#39;ll do nicely.&quot; He pushes the paperwork toward you. &quot;Just sign this contract here, and you&#39;ll be his to wear for the next year!&quot;
+
+As you take a quick read through the paperwork (and the legalese swims in front of your eyes), the fennec makes a quick call on his desktop phone to let the client know you&#39;ve signed on.
+
+A few minutes later, a 
 &lt;b&gt;The End!&lt;/b&gt;
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="30" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
 (Ending not written yet) You get turned into a coffee machine
@@ -1501,9 +1503,37 @@ $Questions.Q2 = {
     &lt;&lt;set $scoreMannequin += 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Desktop Toy" tags="ending" position="925,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Desktop Toy" tags="ending-done" position="925,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Desktop Toy&quot;, other_properties: &quot;values&quot;})&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding = 1&gt;&gt;Different Dialogue (voluntary) &lt;&lt;/if&gt;&gt;(Ending not written yet) You get turned into a desktop toy
+&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $deskToyAgain == 1&gt;&gt;Cassel smiles at you. &quot;Well, hopefully by the end of it, you&#39;ll have an idea in mind of what you want to do next.&quot;&lt;&lt;elseif $postEnding == 1&gt;&gt;Cassel claps his hands together and beams. &quot;Great!&quot; he says, &quot;I needed a new desk toy!&lt;&lt;else&gt;&gt;Cassel shakes his head, frustrated. &quot;Maybe a year on my desk will give you time to reflect and think about what you want to do,&quot; he growls.&lt;&lt;/if&gt;&gt;
+You open your mouth to say something, but are distracted by what&#39;s happening to your hands. Your fingers have begun to shrink and vanish into your paws, and your fur is being replaced by a reflective, shiny metal texture. As you stare, your hands seem to inflate, becoming rounder and more ball-like.
+
+Cassel steps from behind the desk. &quot;Here, let&#39;s get you out of those clothes before they start getting in the way,&quot; he says. He helps you tug off your shirt and pants, which you would otherwise have struggled with considering how useless your metal-ball hands are now.
+
+As your pants come off, you notice that your balls - your actual balls, not the ones on the ends of your arms - have begun to swell, quickly going from normal sized to kiwi sized to grapefruit and then canteloupe sized. They too begin to take on a silver shine, hanging lower and lower as they grow.
+
+Your cock isn&#39;t spared, either. It begins to swell between your balls, until it too is a canteloupe-sized silver ball clattering between the two that used to be your nuts.
+
+Cassel watches with amusement, then reaches down and lifts one of your balls, dropping it and letting it swing back towards your cock.
+
+&lt;i&gt;CLICK, CLACK!&lt;/i&gt; Your ball strikes your cock, and you gasp in pleasure at the sensation. The ball instantly transfers the energy through and causes your other ball to swing away, until it loses momentum and swings back as well.
+
+The fennec spares you and grabs your ball before it makes contact again, gently lowering it to rest.
+
+While distracted by your clattering balls, you didn&#39;t notice your arms thinning out until they were little more than two metal cables attached to your shoulders. Your legs start slipping out from under you, bending in an unnatural way until they form a base that you rest on comfortably. Your torso stretches and bends, and your head along with it, causing some brief vertigo.
+
+The vertigo feeling is amplified as you begin to shrink, your reshaped body and five silver balls shrinking down to a more desktop-friendly size. Cassel bends down to pick you up from the floor and sets you carefully on the desk.
+
+&quot;Well, would you look at that,&quot; he muses. He reaches out and grabs one of the balls that used to be your hands and raises it up. Cassel lets the ball go and it swings down, contacting one of your nuts with a &lt;i&gt;CLACK&lt;/i&gt; sound and a feeling like you just slapped yourself in the balls.
+
+As the energy transfers through, again you feel an incredible pleasure in the ball that was your cock, and then your other hand is sailing away, arcing up and then back down again to repeat the process in reverse. &lt;i&gt;CLACK!&lt;/i&gt;, slap, pleasure, up and away and down again. &lt;i&gt;CLACK!&lt;/i&gt;, slap, pleasure, up and away and down again.
+
+As your balls get mercilessly slapped by your metal hands, and your cock feels all the energy move through it in staccato bursts of pleasure, you wish desperately that you were able to cum, but you know that that won&#39;t be possible for the next year.
+
+Cassel sits back down at his desk and starts doing some paperwork, letting your &lt;i&gt;click, clack&lt;/i&gt; form a metronome for his work. Every once in a while, as your energy starts running out, he&#39;ll reach out, lifting your paw high and dropping it to start the pleasurable torture all over again.
+
+On and on it goes, your only relief coming when he leaves for the night. But you know that as soon as he comes back the next morning, the cycle begins anew. Because that&#39;s all you are for the next year: a desktop toy for him to play with.
+
 &lt;b&gt;The End!&lt;/b&gt;
 [[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="42" name="Security Camera" tags="ending" position="1025,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Security Camera&quot;, other_properties: &quot;values&quot;})&gt;&gt;
