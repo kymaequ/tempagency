@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="TempAgency" startnode="51" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
+	<tw-storydata name="TempAgency" startnode="49" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
     return "JavaScript loaded!";
 };
 
@@ -256,18 +256,18 @@ A few moments later the door behind the desk opens and you see a fennec fox. He 
 &lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Leave" tags="" position="675,475" size="100,100">&lt;&lt;nobr&gt;&gt;&lt;&lt;set $leaveCount +=1&gt;&gt;
 &lt;&lt;if $leaveCount &gt;= 5&gt;&gt;
 	On second thought... you don&#39;t really need a job after all. You turn to leave, but suddenly the door behind the desk whips open and an angry fennec stands in its threshold.&lt;br&gt;&lt;br&gt;
-    &quot;For all that is...&quot; he huffs. &quot;In and out, in and out! Make up your mind! It&#39;s like a revolving door here with you!&quot; He rubs his temples in frustration. &quot;You know what, I&#39;ve got the perfect job for you.&quot;&lt;br&gt;&lt;br&gt;
+    &quot;For all that is...&quot; he huffs. &quot;In and out, in and out! Make up your mind! It&#39;s like a revolving door here with you!&quot; He rubs his temples in frustration. &quot;You know what? I&#39;ve got the perfect job for you, after all!&quot;&lt;br&gt;&lt;br&gt;
     [[Continue|end_Revolving]]
 &lt;&lt;elseif $jobsTaken &gt;= 1&gt;&gt;
   &lt;&lt;set $lastEndingName = $priorEndings.last().name&gt;&gt;
   &lt;&lt;set $formattedLastEndingName = setup.formatSingleName($lastEndingName)&gt;&gt;
       On second thought... you&#39;ve got money, you should spend it and live your life now that you&#39;re no longer $formattedLastEndingName. You can always come back another time. You turn around a leave the &lt;i&gt;New You Temp Agency&lt;/i&gt;, the bell above the door tinkling as you depart.&lt;&lt;set $secondThoughts to true&gt;&gt;
-      &lt;br&gt;&lt;br&gt;&lt;b&gt;THE END!&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+      &lt;br&gt;&lt;br&gt;&lt;b&gt;The End!&lt;/b&gt;&lt;br&gt;&lt;br&gt;
 
 [[Go to Main Menu|Main Menu]]
 &lt;&lt;else&gt;&gt;
 	On second thought... you decide that you don&#39;t need a temp job after all. You can probably find another job somewhere else, right? You turn around a leave the &lt;i&gt;New You Temp Agency&lt;/i&gt;, the bell above the door tinkling as you depart.
-    &lt;br&gt;&lt;br&gt;&lt;b&gt;THE END!&lt;/b&gt;&lt;br&gt;&lt;br&gt;
+    &lt;br&gt;&lt;br&gt;&lt;b&gt;The End!&lt;/b&gt;&lt;br&gt;&lt;br&gt;
 
 [[Go to Main Menu|Main Menu]]
 &lt;&lt;/if&gt;&gt;
@@ -412,7 +412,7 @@ You nod.
 &quot;Alright! Question one:&quot;
 &lt;&lt;include &quot;InterviewSetup&quot;&gt;&gt;
 &lt;&lt;include &quot;InterviewQuestions&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="11" name="To-Do List" tags="" position="100,425" size="100,100">- Write endings</tw-passagedata><tw-passagedata pid="12" name="Endings List" tags="" position="100,550" size="100,100">Endings:
+</tw-passagedata><tw-passagedata pid="11" name="Endings List" tags="" position="100,550" size="100,100">Endings:
 
 1. Gym - Socks
 2. Bank - ATM
@@ -432,13 +432,13 @@ You nod.
 (Secret) Temp Agency - Security Camera
 (Secret) Temp Agency - Kinetic Toy
 (Secret) Temp Agency - Cassel Clone
-(Secret) Temp Agency - Revolving Door</tw-passagedata><tw-passagedata pid="13" name="PassageFooter" tags="" position="525,150" size="100,100"></tw-passagedata><tw-passagedata pid="14" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
+(Secret) Temp Agency - Revolving Door</tw-passagedata><tw-passagedata pid="12" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
       &lt;&lt;displayRandomQuestion&gt;&gt;
       &lt;&lt;set $questionCount+=1&gt;&gt;
   &lt;&lt;else&gt;&gt;
       He smiles and puts down the clipboard. &quot;I think I have enough to go on,&quot; he says.&lt;br&gt;
       &lt;&lt;include &quot;DecideFate&quot;&gt;&gt;
-  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="15" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
+  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
 &lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0, $postEnding = 0&gt;&gt;
 
 &lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0&gt;&gt;
@@ -681,7 +681,7 @@ window.updateScores = function(answerNum, question) {
     &lt;&lt;/for&gt;&gt;
     
     &lt;&lt;set $allUnlocked = _allFound&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="16" name="Chair" tags="ending-done" position="925,375" size="100,100">&lt;h2&gt;Ending - Chair&lt;/h2&gt;
+&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Chair" tags="ending-done" position="925,375" size="100,100">&lt;h2&gt;Ending - Chair&lt;/h2&gt;
 Cassel claps his hands together. &quot;Fantastic! It&#39;s always nice hiring in-house.&quot; He pulls out some paperwork, scribbles a few things, and then hands you a pen to sign it. &quot;The contract will be for a year,&quot; he tells you as you sign the papers, &quot;and your pay will be waiting for you when it&#39;s over. Now, if you wouldn&#39;t mind...&quot; He gets up and gestures toward an empty space in the middle of the room. &quot;If you could just stand over there and remove your clothes (otherwise they may rip).&quot;
 
 Obligingly, you stand up and go where he&#39;s pointed. Feeling a bit self-conscious, you strip down, tossing your clothes off to the side. Almost instantly, you forget about your awkwardness as your body starts to feel quite strange.
@@ -701,7 +701,7 @@ He sits down on your lap, and if you were capable of moaning, you would. Your co
 &quot;Ahh, that&#39;s nice,&quot; he says, scooching you forward closer to the desk so he can start doing some paperwork. &quot;I&#39;m definitely gonna spend a lot of time sitting on you over this next year...&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="17" name="ATM" tags="ending-done" position="925,475" size="100,100">&lt;h2&gt;Ending - ATM&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="15" name="ATM" tags="ending-done" position="925,475" size="100,100">&lt;h2&gt;Ending - ATM&lt;/h2&gt;
 Cassel takes out some paperwork and sets it on the desk. &quot;Excellent! I&#39;m sure that the Robbem Bank will appreciate having you! Just sign these papers here and you can head over there to get started.&quot;
 
 You sign the papers and make your way to the bank. The bank manager meets you and gives you an enthusiastic handshake. &quot;Here at the Robbem Bank, we pride ourselves on our customer service!&quot; he tells you. &quot;And we&#39;re hoping to improve on that service with a new generation of automated teller machines. You will be our pilot project!&quot;
@@ -743,10 +743,10 @@ You try your best, but the feeling when they request a withdrawal is too sudden 
 Though he was worried that it would be disruptive and unappreciated, the manager is surprised by how popular your method of giving customers money turns out to be, as you quickly become the most-used ATM in the bank in only a few days... and you get to have a whole year of this.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="18" name="Standee" tags="ending" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="16" name="Standee" tags="ending" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
 (Ending not written yet) You get turned into a cardboard standee
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="17" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
 &lt;&lt;if $rejectCount &gt;= 6&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
 The fennec sets down his pencil and pinches the bridge of his snout in exasperation. &quot;You can&#39;t make up your mind? Well, I&#39;ve got a job for you!&quot;
 &lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
@@ -787,7 +787,7 @@ The fennec shrugs his shoulders. &quot;Unless you&#39;d like to be my desktop to
     	&lt;&lt;/button&gt;&gt;
 	&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="20" name="Statue" tags="ending-done" position="1025,375" size="100,100">&lt;h2&gt;Ending - Statue&lt;/h2&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Statue" tags="ending-done" position="1025,375" size="100,100">&lt;h2&gt;Ending - Statue&lt;/h2&gt;
 Cassel beams. &quot;Fantastic!&quot; he says, and produces some paperwork from a drawer in his desk. &quot;Just sign these, and then head on over to the museum. I&#39;ll let them know you&#39;re coming.&quot;
 
 You sign the paperwork and dutifully make your way over to the museum, where you&#39;re met by an imposing but friendly rhino who leads you through the museum to a back room.
@@ -821,7 +821,7 @@ The exhibit opens eventually, and you stare ahead unmovingly as crowds pass by. 
 As the day ends, the crowds thin, until you&#39;re left alone in the dark exhibit hall, time blurring together as the dark hours pass until day comes, the museum opens, and the crowds come again. All the while you stand, immobile, just a statue for them to see.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Baseball Bat" tags="ending-done" position="1025,475" size="100,100">&lt;h2&gt;Ending - Baseball Bat&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="Baseball Bat" tags="ending-done" position="1025,475" size="100,100">&lt;h2&gt;Ending - Baseball Bat&lt;/h2&gt;
 The fennec nods and smiles. &quot;It&#39;ll certainly be a fun job, that&#39;s for sure.&quot; He pulls out some paperwork. &quot;Just gotta get you to sign the contract first, and then you can head over to the stadium.&quot;
 
 He hands you a pen and you sign where he tells you to, sealing your fate for the next year. With a smile and a wave and a &quot;Hope you hit lots of homers!&quot;, Cassel sees you off as you head to the stadium.
@@ -865,13 +865,13 @@ The puma is up at bat, and you do your best to be a good bat for him. Swing afte
 When the game ends, you&#39;re set down again, to wait until the next time you&#39;re used. The next time you&#39;re held. The next time you can fulfil your purpose. It&#39;s going to be a good year.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Tubeman" tags="ending" position="1025,575" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="20" name="Tubeman" tags="ending" position="1025,575" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
 (Ending not written yet) You get turned into a waving tubeman
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Ice Sculpture" tags="ending" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Ice Sculpture" tags="ending" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
 (Ending not written yet) You get turned into an ice sculpture
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Underwear" tags="ending-done" position="1125,375" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Underwear" tags="ending-done" position="1125,375" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
 Cassel nods and smiles. &quot;Fantastic!&quot; he says. &quot;Now, you&#39;re gonna be getting real close and personal with the client for the next year, so I hope you&#39;re ready for that!&quot; He produces some paperwork from his desk and passes you a pen to sign.
 
 Once the paperwork is out of the way, he makes a phone call and bids you to wait for a few minutes.
@@ -907,16 +907,16 @@ You hear Cassel return to the room, and he exchanges some words with the tiger. 
 All the while you&#39;ve got a faceful of tiger crotch, and you can&#39;t think of anywhere else you&#39;d rather be. It&#39;s gonna be a great year. You hope that he wears you often, and prays he remembers to wash you.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Socks" tags="ending" position="1125,475" size="100,100">&lt;h2&gt;Ending - Socks&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Socks" tags="ending" position="1125,475" size="100,100">&lt;h2&gt;Ending - Socks&lt;/h2&gt;
 (Ending not written yet) You get turned into socks
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Pup Gear" tags="ending" position="1125,575" size="100,100">&lt;h2&gt;Ending - Pup Gear&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Pup Gear" tags="ending" position="1125,575" size="100,100">&lt;h2&gt;Ending - Pup Gear&lt;/h2&gt;
 (Ending not written yet) You get turned into pup gear
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Beachball" tags="ending" position="1075,675" size="100,100">&lt;h2&gt;Ending - Beachball&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Beachball" tags="ending" position="1075,675" size="100,100">&lt;h2&gt;Ending - Beachball&lt;/h2&gt;
 (Ending not written yet) You get turned into a beachball
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="Rubber Drone" tags="ending-done" position="1225,375" size="100,100">&lt;h2&gt;Ending - Drone&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Rubber Drone" tags="ending-done" position="1225,375" size="100,100">&lt;h2&gt;Ending - Drone&lt;/h2&gt;
 Cassel nods knowingly. &quot;I&#39;m sure that you&#39;ll enjoy it,&quot; he tells you. &quot;You&#39;ll be contracted with HIVE Corp. for the next year, so if you can just sign this paperwork we can get you started.&quot; He produces some paperwork and a pen, and you obligingly sign your name.
 
 After the paperwork is all squared away, he sends you off to the HIVE Corp. headquarters, where you&#39;re met by a no-nonsense doberman who leads you through a labyrinth of corridors to a white room with a one-way mirror, a grated floor, and what looks like a showerhead in the ceiling.
@@ -966,7 +966,7 @@ Yes, you&#39;ll obey.
 &quot;Conditioning stage one complete. Beginning stage two.&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="Fursuit" tags="ending-done" position="1225,475" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Fursuit" tags="ending-done" position="1225,475" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
 Cassel nods and pulls out some paperwork. &quot;Glad to hear it! The client says he&#39;s got a con coming up and would love to have a full suit to wear, so I&#39;m sure you&#39;ll do nicely.&quot; He pushes the paperwork toward you. &quot;Just sign this contract here, and you&#39;ll be his to wear for the next year!&quot;
 
 As you take a quick read through the paperwork (and the legalese swims in front of your eyes), the fennec makes a quick call on his desktop phone to let the client know you&#39;ve signed on.
@@ -1012,27 +1012,25 @@ You can tell that you&#39;re a big hit right away. Lots of people stop to compli
 While it&#39;s disorienting and strange feeling someone moving you from within, and even more disorienting when they get out of you and leave your disembodied parties strewn about the room, you know that you&#39;re gonna have a very fun year.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="30" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
 (Ending not written yet) You get turned into a coffee machine
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="31" name="end_Security" tags="" position="1025,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
-The door opens, catching you off guard. &quot;Snooping around, eh?&quot; a fennec fox says, his hands on his hips.
-
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="end_Security" tags="" position="1025,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
+The door opens, catching you off guard. &quot;Snooping around, eh?&quot; the fennec fox says, his hands on his hips. &quot;Seems we need a bit better security here... and you&#39;ll do just fine.&quot;
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Security Camera&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;h2&gt;Caught... Again!&lt;/h2&gt;
 The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;/i&gt;?&quot; the fennec fox says, shaking his head in disappointment. &quot;I thought you&#39;d learned your lesson, but I guess not. Seems you need to spend a bit more time working in security!&quot;
-
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="end_Secret" tags="" position="1225,800" size="100,100">&lt;&lt;include &quot;Clone&quot;&gt;&gt;
+&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="end_Secret" tags="" position="1225,800" size="100,100">&lt;&lt;include &quot;Clone&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Clone&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Clone&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $rejectAllAgain = 0&gt;&gt;
-&lt;&lt;set $unlockedSecret = 1&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the &lt;i&gt;New You Temp Agency&lt;/i&gt;, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the &lt;i&gt;New You Temp Agency&lt;/i&gt; provides dedicated workers for short- or long-term needs!&quot;
+&lt;&lt;set $unlockedSecret = 1&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the &lt;i&gt;New You Temp Agency&lt;/i&gt;, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the &lt;i&gt;New You Temp Agency&lt;/i&gt; provides dedicated workers for short- or long-term needs!&quot;
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
@@ -1041,7 +1039,7 @@ The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;
 &quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="34" name="Mannequin" tags="ending-done" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
+[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="32" name="Mannequin" tags="ending-done" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
 &quot;Excellent choice,&quot; Cassel says, nodding. &quot;I knew you were the right one for the job.&quot; He withdraws some paperwork from his desk and slides it over to you with a pen. &quot;Just sign this contract and you can head off to your new gig!&quot;
 
 After you sign the paperwork you make your way a short distance to Sew it Would Seam, a trendy clothing store a couple streets over. The owner, a fashionable zebra, greets you as you enter.
@@ -1086,7 +1084,7 @@ As jobs go, this is one of the easiest you&#39;ve ever had. Day in and day out, 
 
 Every once in a while the zebra takes you apart and redresses you in something new, one of the only ways besides the waxing and waning warmth of the sun that you can use to mark the passage of time. Quite quickly you&#39;re treated just like any other mannequin in the shop - simply a decoration, a thing to wear the shop&#39;s wares. And you wouldn&#39;t have it any other way. It&#39;s what you&#39;re for, after all.
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="35" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;&lt;checkAllEndings&gt;&gt;&lt;&lt;if !$allUnlocked&gt;&gt;&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="33" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;&lt;checkAllEndings&gt;&gt;&lt;&lt;if !$allUnlocked&gt;&gt;&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
 You enter Cassel&#39;s office. He gestures for you to take a seat and you sit on the nicely-carved oak chair in front of his desk. 
 &lt;&lt;if $pcOn is true&gt;&gt;
 	With a jolt, you realize that it&#39;s the tiger whose employee file you were reading on the computer... and you&#39;re about to sit on him! As you lower yourself down onto the surprisingly comfortable seat, you hope he doesn&#39;t mind your ass on him.
@@ -1121,7 +1119,7 @@ You enter Cassel&#39;s office. He gestures for you to take a seat and you sit on
 &lt;&lt;elseif $allUnlocked&gt;&gt;
 &lt;&lt;goto &quot;end_Secret&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
-Something broke!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="EndingGallery" tags="" position="675,50" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
+Something broke!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="EndingGallery" tags="" position="425,250" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
 Here you can view the endings that you&#39;ve unlocked!
 
 &lt;table style=&quot;width:100%&quot; class=&quot;endings-table&quot; &gt;
@@ -1162,7 +1160,7 @@ Here you can view the endings that you&#39;ve unlocked!
 
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="Bug List" tags="" position="100,675" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Bug List" tags="" position="100,675" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
 
 (FIXED) - Get the &quot;contract ends after a year&quot; when returning after unlocking secret ending and returning again
 		(added new code to handle returns)
@@ -1176,12 +1174,12 @@ Here you can view the endings that you&#39;ve unlocked!
 		(achieved endings aren&#39;t shown in list so their earned points don&#39;t appear)
 (FIXED) Reject All ending comes up simultaneous with Secret Ending
 (FIXED) - Questions can come up repeatedly
-(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="38" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
+(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="36" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;set $firstOffer to true&gt;&gt;
 	&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;rejectJobBanter&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
 
 &lt;&lt;set $Questions.Q1 = { 
     question: &quot;Where do you see yourself in five years?\&quot;&quot;, 
@@ -1462,7 +1460,7 @@ $Questions.Q2 = {
     &lt;&lt;/link&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="40" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
 &lt;&lt;set _currentQuestion = $Questions[$currentQuestionKey]&gt;&gt;
 
 &lt;&lt;if $currentAnswer == 1&gt;&gt;
@@ -1542,7 +1540,7 @@ $Questions.Q2 = {
     &lt;&lt;set $scoreMannequin += 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="41" name="Desktop Toy" tags="ending-done" position="925,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Desktop Toy" tags="ending-done" position="925,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Desktop Toy&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $deskToyAgain == 1&gt;&gt;Cassel smiles at you. &quot;Well, hopefully by the end of it, you&#39;ll have an idea in mind of what you want to do next.&quot;&lt;&lt;elseif $postEnding == 1&gt;&gt;Cassel claps his hands together and beams. &quot;Great!&quot; he says, &quot;I needed a new desk toy!&lt;&lt;else&gt;&gt;Cassel shakes his head, frustrated. &quot;Maybe a year on my desk will give you time to reflect and think about what you want to do,&quot; he growls.&lt;&lt;/if&gt;&gt;
 You open your mouth to say something, but are distracted by what&#39;s happening to your hands. Your fingers have begun to shrink and vanish into your paws, and your fur is being replaced by a reflective, shiny metal texture. As you stare, your hands seem to inflate, becoming rounder and more ball-like.
@@ -1574,11 +1572,34 @@ Cassel sits back down at his desk and starts doing some paperwork, letting your 
 On and on it goes, your only relief coming when he leaves for the night. But you know that as soon as he comes back the next morning, the cycle begins anew. Because that&#39;s all you are for the next year: a desktop toy for him to play with.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="42" name="Security Camera" tags="ending" position="1025,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
+[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="40" name="Security Camera" tags="ending-done" position="1025,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Security Camera&quot;, other_properties: &quot;values&quot;})&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding = 1&gt;&gt;Different Dialogue&lt;&lt;/if&gt;&gt;(Ending not written yet) You get turned into a security camera
+&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding == 1&gt;&gt;Cassel nods happily. &quot;Great! We don&#39;t get a lot of traffic through here, but you&#39;ll certainly help keep an eye on things.&quot;&lt;br&gt;&lt;&lt;/if&gt;&gt;Quite quickly, you feel a sense of dizziness and disorientation as the ground rushes up towards you. Your legs have begun shrinking, disappearing beneath you, and you fall out of your pants and topple over onto the ground with a thump.
+
+Looking down at your legs, you see them merge together and form a short base with a few holes in it just below your hips. Your cock and balls dangle freely, but not for long as they too begin to shrink, disappearing into your torso as your torso starts to become a bit blockier in shape.
+
+Your fur is receding, replaced by a smooth lightly-grey plastic shell, as your torso loses definition and becomes nothing more than a plastic rectangular prism. All the while, your arms have also been receding into your sides, unnecessary appendages for your new use.
+
+You look up at Cassel standing over you and try to speak, but you&#39;ve lost your voice and can do no more than gently shake your head back and forth - a motion that continues even after you try to stop it. Your vision is locked forwards, panning left and right in a consistent motion. Cassel reaches down and picks you up in his hands, inspecting you.
+
+&quot;Not the newest model, but you&#39;ll do,&quot; he tells you. He sets you on the secretary&#39;s desk and disappears for a moment, returning with a ladder and some tools. The fennec puts the ladder in the corner, grabs you, and ascends the ladder.
+
+&lt;i&gt;Dhzzzt! Dhzzzt!&lt;/i&gt; A high pitched whine and your whole body vibrates a bit as he drills some screws through the holes in your base, securing you to the ceiling in the corner of the room. Once he&#39;s done he steps back and inspects his work, nodding to himself in satisfaction.
+
+&quot;Great! Now I&#39;ll be able to catch any other snoops sneakin&#39; around when I&#39;m in the back,&quot; he says, looking up at you. You can only shake your head in reply, slowly panning across the room in a perpetual loop, ever on the lookout for something to see.
+
+Cassel returns to his office, leaving you to surveil the empty room. No more applicants come in that day, and you watch the shadows lengthen across the room as the sun sets outside.
+
+The fennec eventually emerges, switches the lights off, and departs for the night without even a glance in your direction.
+
+As the room darkens, you find that you&#39;re still able to see quite well, and still you scan back and forth, back and forth, back and forth, until the sky starts to lighten again and Cassel returns for a new day.
+
+And so it goes, day after day, night after night, watching the comings and goings of the &lt;i&gt;New You Temp Agency&lt;/i&gt;. You&#39;re embarrassed to see that no one else snoops around while waiting for their interview, and all of them leave Cassel&#39;s office looking happy and ready to go off to whatever assignment they earned.
+
+Meanwhile you watch from the corner, back and forth, back and forth, keeping watch.
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="43" name="Clone" tags="ending-done" position="1225,900" size="100,100">&lt;h2&gt;Ending - Cassel Clone&lt;/h2&gt;
+[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="41" name="Clone" tags="ending-done" position="1225,900" size="100,100">&lt;h2&gt;Ending - Cassel Clone&lt;/h2&gt;
 Cassel steeples his fingers and rests his chin on them. &quot;I&#39;ve been doing this for a long time,&quot; he says, &quot;and I rarely get to take any time off for myself.&quot;
 
 He gestures at you. &quot;And you, well, you&#39;ve been such a reliable employee these past many years. A statue, socks, my chair, and more besides. Anywhere I send you, you do a great job. So I think I know the perfect final job for you.&quot; The fennec grins. &quot;Me!&quot;
@@ -1606,7 +1627,7 @@ With a tip of his hat and a promise to send a postcard, Cassel departs, leaving 
 A few minutes later, you hear the ringing of a bell and a voice calling out, &quot;Hello? I&#39;m here to apply for a job!&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="44" name="Main Menu" tags="" position="525,350" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="42" name="Main Menu" tags="" position="525,350" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
 &lt;i&gt;&lt;b&gt;Temp Agency&lt;/b&gt; is a work of gay pornographic furry fiction by Ky the Capybara, and is intended only for an 18+ audience. It contains horny inanimate transformation. Play at your peril!&lt;/i&gt;
 
 Welcome to the &lt;i&gt;New You Temp Agency&lt;/i&gt;! With you resumé in hand (you did bring one, right?), you sit down for an interview to determine where you might best be placed. But this temp agency doesn&#39;t hire out for normal jobs, so be prepared!&lt;br&gt;
@@ -1619,7 +1640,7 @@ Welcome to the &lt;i&gt;New You Temp Agency&lt;/i&gt;! With you resumé in hand 
 &lt;&lt;goto &quot;Main&quot;&gt;&gt;
 &lt;&lt;/button&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Current game version: v0.1&lt;/i&gt;
 &lt;br&gt;&lt;i&gt;I&#39;d love to hear your feedback! Drop me a message if you enjoyed the game or encountered a game-breaking bug that I need to squish! https://linktr.ee/kymaequ &lt;/i&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Walkthrough" tags="" position="675,350" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Walkthrough" tags="" position="625,350" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;
 Contains spoilers! Also will be written properly later.
 
 For the normal endings, just get the highest score in questions for that ending, or reject jobs until you are offered the ending you want.
@@ -1641,13 +1662,15 @@ Currently-Complete Endings:
 - Mannequin
 - Secret Ending: Clone
 - Secret Ending: Desktop Toy
+- Secret Ending: Revolving Door
+- Secret Ending: Security Camera
 
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Changelog" tags="" position="675,250" size="100,100">No changes.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Changelog" tags="" position="425,350" size="100,100">No changes.
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Credits" tags="" position="675,150" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Credits" tags="" position="625,250" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
 &lt;b&gt;Temp Agency&lt;/b&gt; was made by Ky the Capybara 
 https://linktr.ee/kymaequ
 
@@ -1659,7 +1682,7 @@ https://www.furaffinity.net/user/blueballs
 
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
@@ -1668,16 +1691,41 @@ https://www.furaffinity.net/user/blueballs
 &quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="49" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
+[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="47" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="50" name="Revolving Door" tags="ending" position="1125,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;
-  &lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;
-&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding = 1&gt;&gt;Different Dialogue&lt;&lt;/if&gt;&gt;&lt;h2&gt;Ending - Revolving Door&lt;/h2&gt;
-(Ending not written yet) You get turned into a revolving door
+&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Revolving Door" tags="ending-done" position="1125,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;&lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding == 1&gt;&gt;Cassel smiles at you. &quot;It&#39;s an unusual assignment, but I&#39;m sure it&#39;ll open some new doors for you... so to speak.&quot;&lt;&lt;/if&gt;&gt;&lt;h2&gt;Ending - Revolving Door&lt;/h2&gt;
+You stand by the door, confused. Your hand brushes the door and you jump with a yelp, as though you just got static shocked. But as you try to pull your hand away, you discover that it&#39;s stuck to the door!
+
+You tug and tug, but your hand doesn&#39;t come free. You brace your foot against the door for more leverage, but your foot becomes stuck as well!
+
+Standing awkwardly, with a foot and a paw stuck to the door, you look over at the fennec who is watching with amusement.
+
+&quot;I shoulda maybe gotten you out of those clothes first,&quot; he muses, &quot;I don&#39;t think they&#39;ll survive what happens.&quot;
+
+You awkwardly hop the rest of yourself over and try to tug your paw free, but it&#39;s no use. Your body starts to stretch and bend, your arm and leg growing longer as a shimmering pane of glass grows in the gap between them.
+
+Your free arm and leg remain so for only moments more, as your body moves on its own, sending them sticking out to your sides as they too grow glass and become another facet of the door.
+
+You stand awkwardly in a butterfly pose, both arms and legs sticking out forming doors with your body in the middle. But revolving doors usually have four...
+
+Looking down in alarm, you watch as your cock and balls begin to stretch out, your cock rising up and your balls sinking down, as they flatten out and leave a glass window between them. Simultaneously, your tail is splitting in half and doing the same thing behind you.
+
+The door to which you had been stuck has been shifting as well, splitting and becoming a rounded wall on either side of you.
+
+Your torso lengthens and becomes skinnier, forming the central axel of the revolving door. Your vision is locked forwards, and you can see Cassel standing inside chuckling.
+
+As the changes complete, he steps forward and pushes on one of your doors. You feel a slight pressure on your cock, and you begin to slowly rotate. He steps inside and takes a loop around, emerging again back into the office.
+
+&quot;Excellent,&quot; he says, inspecting the new revolving door for the office. &quot;Just what I needed.&quot; He looks at you for a moment longer, then returns to his office.
+
+You stand there, unmoving, for quite a time, but eventually feel a pressure on your tail and you begin to rotate, spinning to face the street as someone enters the office.
+
+And so it will go, being granted a new view each time someone comes and goes, spinning, spinning, spinning. Nothing more than a door to a place that gives applicants like you a new job for at least the next year...
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="51" name="password" tags="" position="1000,100" size="100,100">&lt;&lt;set _answer to &quot;&quot;&gt;&gt;This game is still under construction! Unless you&#39;re testing it, please check back another time!
+[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="49" name="password" tags="" position="1000,100" size="100,100">&lt;&lt;set _answer to &quot;&quot;&gt;&gt;This game is still under construction! Unless you&#39;re testing it, please check back another time!
 
 Please enter the password to continue:
 
