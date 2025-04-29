@@ -104,7 +104,7 @@ var LZString=function(){var r=String.fromCharCode,o="ABCDEFGHIJKLMNOPQRSTUVWXYZa
 		<div id="init-lacking"><p>Browser lacks capabilities required to play.</p><p>Upgrade or switch to another browser.</p></div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="TempAgency" startnode="49" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
+	<tw-storydata name="TempAgency" startnode="41" creator="Twine" creator-version="2.9.2" format="SugarCube" format-version="2.37.3" ifid="F928C100-1269-4C69-A4A6-71FAEE521870" options="" tags="" zoom="0.6" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css"></style><script role="script" id="twine-user-script" type="text/twine-javascript">setup.testFunction = function() {
     return "JavaScript loaded!";
 };
 
@@ -412,33 +412,13 @@ You nod.
 &quot;Alright! Question one:&quot;
 &lt;&lt;include &quot;InterviewSetup&quot;&gt;&gt;
 &lt;&lt;include &quot;InterviewQuestions&quot;&gt;&gt;
-</tw-passagedata><tw-passagedata pid="11" name="Endings List" tags="" position="100,550" size="100,100">Endings:
-
-1. Gym - Socks
-2. Bank - ATM
-3. Manager&#39;s Office - Chair
-4. Beach - Beachball
-5. Museum - Statue
-6. Corporate - Ice Sculpture
-7. Comic Shop - Cardboard Standee
-8. Furcon - Fursuit
-9. Drone Corp - Latex Drone
-10. University - Underwear
-11. Club - Pup Gear
-12. Sports Center- Baseball Bat
-13. Car Dealership - WWIAFTM
-14. Coffee Shop - Espresso machine
-15. Shopping Centre - Mannequin
-(Secret) Temp Agency - Security Camera
-(Secret) Temp Agency - Kinetic Toy
-(Secret) Temp Agency - Cassel Clone
-(Secret) Temp Agency - Revolving Door</tw-passagedata><tw-passagedata pid="12" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
+</tw-passagedata><tw-passagedata pid="11" name="InterviewQuestions" tags="" position="725,975" size="100,100">&lt;&lt;if $questionCount &lt;= 10&gt;&gt;&lt;h2&gt;Question $questionCount&lt;/h2&gt;
       &lt;&lt;displayRandomQuestion&gt;&gt;
       &lt;&lt;set $questionCount+=1&gt;&gt;
   &lt;&lt;else&gt;&gt;
       He smiles and puts down the clipboard. &quot;I think I have enough to go on,&quot; he says.&lt;br&gt;
       &lt;&lt;include &quot;DecideFate&quot;&gt;&gt;
-  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
+  &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="12" name="StoryInit" tags="" position="525,200" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
 &lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0, $postEnding = 0&gt;&gt;
 
 &lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0, $doneFirstInterview = false&gt;&gt;
@@ -681,7 +661,7 @@ window.updateScores = function(answerNum, question) {
     &lt;&lt;/for&gt;&gt;
     
     &lt;&lt;set $allUnlocked = _allFound&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="14" name="Chair" tags="ending-done" position="925,375" size="100,100">&lt;h2&gt;Ending - Chair&lt;/h2&gt;
+&lt;&lt;/nobr&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="Chair" tags="ending-done" position="900,350" size="100,100">&lt;h2&gt;Ending - Chair&lt;/h2&gt;
 Cassel claps his hands together. &quot;Fantastic! It&#39;s always nice hiring in-house.&quot; He pulls out some paperwork, scribbles a few things, and then hands you a pen to sign it. &quot;The contract will be for a year,&quot; he tells you as you sign the papers, &quot;and your pay will be waiting for you when it&#39;s over. Now, if you wouldn&#39;t mind...&quot; He gets up and gestures toward an empty space in the middle of the room. &quot;If you could just stand over there and remove your clothes (otherwise they may rip).&quot;
 
 Obligingly, you stand up and go where he&#39;s pointed. Feeling a bit self-conscious, you strip down, tossing your clothes off to the side. Almost instantly, you forget about your awkwardness as your body starts to feel quite strange.
@@ -690,9 +670,9 @@ Your feet begin to darken and change shape, shrinking and turning round as they 
 
 As you sit, your lap begins flattening out. Your upper legs merge together and puff out, becoming a plush seat. Your cock, laying on top of this new surface, begins to stiffen but can&#39;t grow too much before it too flattens out, merging into the seat of the chair.
 
-You notice that you&#39;ve lost control of your arms, and they stick foward awkwardly, but only for a moment until they begin reshaping and becoming the arm rests of the chair.
+You notice that you&#39;ve lost control of your arms, and they stick forward awkwardly, but only for a moment until they begin reshaping and becoming the arm rests of the chair.
 
-With some difficulty, you look down at your chest as it flattens out into the back of the chair changing color and texture until it&#39;s a comfortable, plush red, and then your view is forced fowards as your head and face become the headrest. You give an excited little peep as the changes finalize, then move no more.
+With some difficulty, you look down at your chest as it flattens out into the back of the chair changing color and texture until it&#39;s a comfortable, plush red, and then your view is forced forwards as your head and face become the headrest. You give an excited little peep as the changes finalize, then move no more.
 
 &quot;Ah, wonderful!&quot; Cassel says, approaching you. He grabs you by where your shoulders used to be and rolls you over to his desk, pushing his old chair out of the way with his foot. &quot;You look nice and comfortable. Let&#39;s see, shall we?&quot;
 
@@ -701,7 +681,7 @@ He sits down on your lap, and if you were capable of moaning, you would. Your co
 &quot;Ahh, that&#39;s nice,&quot; he says, scooching you forward closer to the desk so he can start doing some paperwork. &quot;I&#39;m definitely gonna spend a lot of time sitting on you over this next year...&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="15" name="ATM" tags="ending-done" position="925,475" size="100,100">&lt;h2&gt;Ending - ATM&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="14" name="ATM" tags="ending-done" position="900,450" size="100,100">&lt;h2&gt;Ending - ATM&lt;/h2&gt;
 Cassel takes out some paperwork and sets it on the desk. &quot;Excellent! I&#39;m sure that the Robbem Bank will appreciate having you! Just sign these papers here and you can head over there to get started.&quot;
 
 You sign the papers and make your way to the bank. The bank manager meets you and gives you an enthusiastic handshake. &quot;Here at the Robbem Bank, we pride ourselves on our customer service!&quot; he tells you. &quot;And we&#39;re hoping to improve on that service with a new generation of automated teller machines. You will be our pilot project!&quot;
@@ -716,7 +696,7 @@ It tickles a little as the manager laughs and reaches out, pushing some of the b
 
 You wonder what he&#39;s surprised about, but it quickly becomes apparent. Below your abs, your cock has begun to change as well, retracting and flattening, spreading wider until it becomes a sliding slot where money comes out.
 
-You open your mouth to say something, but your mouth gets stuck open, reshaping into a thin horizontal line. Your lips turn a plasticky green surrounding the new card slot. Meanwhile, your nose has begun to grow larger and more square, your snout flattening out against your face to accomodate the large touchscreen that is forming.
+You open your mouth to say something, but your mouth gets stuck open, reshaping into a thin horizontal line. Your lips turn a plasticky green surrounding the new card slot. Meanwhile, your nose has begun to grow larger and more square, your snout flattening out against your face to accommodate the large touchscreen that is forming.
 
 You feel yourself shrinking down a bit, resizing to be shorter and stockier. There&#39;s a moment of disorientation as your eyes merge together, forming one smaller eye just above the touchscreen to keep watch on the customers.
 
@@ -743,7 +723,7 @@ You try your best, but the feeling when they request a withdrawal is too sudden 
 Though he was worried that it would be disruptive and unappreciated, the manager is surprised by how popular your method of giving customers money turns out to be, as you quickly become the most-used ATM in the bank in only a few days... and you get to have a whole year of this.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="16" name="Standee" tags="ending-done" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="15" name="Standee" tags="ending-done" position="900,550" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
 Cassel nods as you accept the offer. &quot;The owner of the shop is an old friend of mine. He might be a bit unusual, but he&#39;s passionate about what he does and I&#39;m sure he&#39;ll put you to good use.&quot; The fennec takes out some papers and slides them over to you. &quot;If you could just sign this first, we can get you on your way.&quot;
 
 You pick up a pen and sign the contract, then give the fennec&#39;s hand a hearty shake in thanks before making your way over to Grottoes &amp; Gremlins. As you enter the slightly gloomy comic and collectibles shop, you find the leopard owner engaged in a hot debate with a customer about the merits of second edition something-or-other over fifth edition, though they both agree that fourth edition is objectively &lt;i&gt;the worst&lt;/i&gt;.
@@ -752,7 +732,7 @@ You pick up a pen and sign the contract, then give the fennec&#39;s hand a heart
 
 You tell him that you&#39;re here from the temp agency, and his face lights up. &quot;Ah yes! I&#39;ve been waiting for ol&#39; Cassel to send someone over!&quot; He looks you up and down briefly. &quot;Yeh&#39;ll definitely do!&quot;
 
-He ducks down behind the counter to rummange for something, and emerges moments later holding a wizard costume and a small chalkboard.
+He ducks down behind the counter to rummage for something, and emerges moments later holding a wizard costume and a small chalkboard.
 
 &quot;Yeh&#39;ll need to put this on, first,&quot; he tells you, passing you the costume over the counter. &quot;Can&#39;t have yeh advertising the store lookin&#39; like &lt;i&gt;that&lt;/i&gt;!&quot; You look down at your outfit, feeling mildly offended. But you shrug and go into the shop&#39;s restroom to change, coming out a few minutes later feeling extremely silly.
 
@@ -762,7 +742,7 @@ Not entirely sure how to &quot;look sagely&quot;, you screw up your face in conc
 
 &quot;Now just stay still while... oop, there we go!&quot;
 
-You want to ask him what he means, but suddenly discover that you can&#39;t really move your face anymore - or anything else, for that matter - which is a relief, because your face muscles were starting to get sore holding that expression.
+You want to ask him what he means, but suddenly discover that you can&#39;t really move your face anymore - or anything else, for that matter - which is a relief, because your face muscles were starting to get sore holding that expression. You feel a pinching sensation at the top of your head, like someone is squeezing the top of your head together. It begins at the top of your head and starts travelling down your face.
 
 You can see in your field of view your snout seemingly flattening into your face. You catch sight of your reflection in the mirror behind the shop counter and you don&#39;t seem to look any different from that angle, but your face definitely &lt;i&gt;feels&lt;/i&gt; flatter. You try to look down, but your eyes seem to be locked ahead.
 
@@ -782,10 +762,10 @@ At closing time in the evening, the leopard carries you back into the shop, leav
 
 It&#39;s not a particularly exciting gig, but you do feel a little rush of pride every time someone looks at you and then goes into the shop, and your self-consciousness ebbs away as the days wear on. You even grow to enjoy it, really. Feeling the sun on you, helping entice people into the shop. Once or twice a gust of wind blows you over, but someone always rights you again.
 
-Such is the life of a cardboard standee. Your life, for the next year.
+Such is the life of a cardboard standee. &lt;i&gt;Your&lt;/i&gt; life, for the next year.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="17" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="16" name="end_Reject" tags="" position="950,675" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
 &lt;&lt;if $rejectCount &gt;= 6&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
 The fennec sets down his pencil and pinches the bridge of his snout in exasperation. &quot;You can&#39;t make up your mind? Well, I&#39;ve got a job for you!&quot;
 &lt;&lt;include &quot;Desktop Toy&quot;&gt;&gt;
@@ -826,7 +806,7 @@ The fennec shrugs his shoulders. &quot;Unless you&#39;d like to be my desktop to
     	&lt;&lt;/button&gt;&gt;
 	&lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="18" name="Statue" tags="ending-done" position="1025,375" size="100,100">&lt;h2&gt;Ending - Statue&lt;/h2&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="17" name="Statue" tags="ending-done" position="1000,350" size="100,100">&lt;h2&gt;Ending - Statue&lt;/h2&gt;
 Cassel beams. &quot;Fantastic!&quot; he says, and produces some paperwork from a drawer in his desk. &quot;Just sign these, and then head on over to the museum. I&#39;ll let them know you&#39;re coming.&quot;
 
 You sign the paperwork and dutifully make your way over to the museum, where you&#39;re met by an imposing but friendly rhino who leads you through the museum to a back room.
@@ -860,7 +840,7 @@ The exhibit opens eventually, and you stare ahead unmovingly as crowds pass by. 
 As the day ends, the crowds thin, until you&#39;re left alone in the dark exhibit hall, time blurring together as the dark hours pass until day comes, the museum opens, and the crowds come again. All the while you stand, immobile, just a statue for them to see.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="Baseball Bat" tags="ending-done" position="1025,475" size="100,100">&lt;h2&gt;Ending - Baseball Bat&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="18" name="Baseball Bat" tags="ending-done" position="1000,450" size="100,100">&lt;h2&gt;Ending - Baseball Bat&lt;/h2&gt;
 The fennec nods and smiles. &quot;It&#39;ll certainly be a fun job, that&#39;s for sure.&quot; He pulls out some paperwork. &quot;Just gotta get you to sign the contract first, and then you can head over to the stadium.&quot;
 
 He hands you a pen and you sign where he tells you to, sealing your fate for the next year. With a smile and a wave and a &quot;Hope you hit lots of homers!&quot;, Cassel sees you off as you head to the stadium.
@@ -904,10 +884,49 @@ The puma is up at bat, and you do your best to be a good bat for him. Swing afte
 When the game ends, you&#39;re set down again, to wait until the next time you&#39;re used. The next time you&#39;re held. The next time you can fulfil your purpose. It&#39;s going to be a good year.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="20" name="Tubeman" tags="ending" position="1025,575" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
-(Ending not written yet) You get turned into a waving tubeman
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="19" name="Tubeman" tags="ending-done" position="1000,550" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
+Cassel nods and smiles. &quot;Excellent! Now, let me get you the contract to sign now. I know from experience that Stan drives a hard bargain and will talk you into a permanent thing if you&#39;re not already signed before you get there!&quot; He grabs some paperwork from inside his desk and hands it over to you to sign.
+
+Once the paperwork is done, setting you up for a nice year-long contract, he gives you the address for Auto von Bismark&#39;s Gently Used Cars and bids you good luck, adding that he&#39;ll call ahead to let Stan know you&#39;re coming.
+
+When you arrive at the car lot, an incredibly enthusiastic sheepdog in a brightly-colored suit is there to greet you. &quot;Weeeeeelcome to Auto von Bismark&#39;s Gently Used Autos!&quot; he declares, his booming voice setting several nearby birds flying up into the sky.
+
+&quot;Now before we get started, can I interest you in one of our fantastic rides?&quot; The sheepdog puts an arm around your shoulder and gestures to the lot of cars. &quot;I know you won&#39;t be using it for the next year, but just think! One of these babies can be yours to drive right off the lot as soon as you&#39;re done! No? Well, can&#39;t blame a boy for trying!&quot;
+
+He laughs and claps you on the back hard enough that you stumble forward a couple steps. &quot;I hope you like to dance, champ, &#39;cause you&#39;re gonna be doing a lot of it over the next year!&quot; he announces. &quot;Without further ado, lets get you in-character!&quot; The sheepdog leads you into the office, away from view of the street.
+
+&quot;Now, ol&#39; Stan here is not responsible for any wear and tear on your clothes, so if you don&#39;t want &#39;em to rip, I&#39;d suggest getting &#39;em off now!&quot; He gives another laugh and winks at you.
+
+You strip down, tossing your clothes over onto a black leather sofa. The sheepdog claps his hands together and nods. &quot;Let&#39;s get started then! You&#39;re gonna be my best new employee, I just know it!&quot;
+
+You can&#39;t help but smile at Stan&#39;s infectiously positive attitude. Your smile grows wider without your meaning it to, and wider still, until you&#39;ve got a cartoonish grin on your face. Try as you might, you realize that it&#39;s stuck that way, and you grin at Stan as you feel yourself growing taller.
+
+In seconds you&#39;re looking down at him, stretching up towards the ceiling. Your legs begin to merge together, turning you into a rapidly-growing tube. Eventually your head bumps against the ceiling, and you bend forwards, continuing to grow and looming over Stan.
+
+Your fur has begun to take on a bright yellow color, and you notice that your cock has turned into nothing more than a tube hanging limply from your front. Your arms, as well, dangle uselessly at your sides, your hands having changed and opened up revealing your hollow arms.
+
+In fact, you realize, all of you is hollow now! The moment you have this realization, you stop being able to support yourself, and your hollow form collapses down to the floor, flattening out across the ground.
+
+&quot;Fantastic, just look at you!&quot; Stan declares. &quot;I&#39;ve got one of those pumps around here somewhere, so let&#39;s get you outside and hooked up! I can already hear the customers beating down my door because of your wily charm!&quot;
+
+Stan grabs your end and begins rolling you up, and your vision briefly fills with the yellow nylon as Stan carries your rolled-up bundle out to the entrance of the car lot. He hooks your hollow feet up to the vent of the air pump and your body begins to vibrate as air starts to circulate.
+
+Then, quite quickly, you unroll and launch up into the sky, standing upright and flailing as the air passes through and out of you. Your arms and cock flap and wave, your body bending and bouncing as air flows from the pump through your body.
+
+Stan claps and cheers. &quot;Now aren&#39;t you just the most enthusiastic thing! Looking great up there, champ!&quot; He puts his hands on his hips and watches you for a few moments, satisfied.
+
+&quot;Alright, time for me to leave you to your work! Wouldn&#39;t want to cramp your style! Have fun out there!&quot; With that, the sheepdog leaves you, and you dance and flail on the corner for everyone to see.
+
+Despite the constant, erratic movement, you don&#39;t feel yourself tiring, and start to really enjoy the feeling. The air passing out of your cock, especially, feels quite good, like someone&#39;s stroking you from the inside.
+
+You dance and dance, and as the day winds down, Stan returns to shut you down and move you inside for safekeeping, before setting you back out again the next day.
+
+Amidst your dancing, you notice a new (or rather, gently used) car leaving the lot every so often, and you feel a twinge of pride, hoping that it&#39;s your sick moves that are leading to these sales.
+
+You hope that Stan&#39;ll give you a commission for those sales when your contract is up. You&#39;ll see!
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Ice Sculpture" tags="ending-done" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="20" name="Ice Sculpture" tags="ending-done" position="1300,350" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
 &quot;Cool!&quot; Casssel laughs. &quot;Sorry, that was a poor joke.&quot; He fetches some paperwork and puts it before you to sign. &quot;Here&#39;s the contract for the job. Just need your signature and you can head to their office. I believe their function is this evening, so you&#39;ll be right on time!&quot;
 
 You pick up a pen and scribble your name on the contract, thank Cassel, and make your way to the offices of Ditcher, Quicke &amp; Hyde. When you present yourself to the receptionist in the lobby, they send you up to the terrace on the 32nd floor and phone ahead to let them know you&#39;ve arrived.
@@ -940,7 +959,7 @@ You give it a few experimental strokes, to some laughter from the growing crowd,
 
 You gasp as you feel a pressure building in your cock, like you&#39;re right on the edge of coming.. Suddenly, a fizzy liquid begins to stream out, pouring down and landing in the basin at your feet, where it disappears into a small drain.
 
-You notice that there seems to be some sort of hollow channel running up one of your legs, and the fizzy liquid is being pumped up from below, circulating around and filling your icy balls, and then emerging from the end of your cock, nice and chilled. The feeling of it emerging is like an unending ejaculation, and you wimper quietly from the sensation.
+You notice that there seems to be some sort of hollow channel running up one of your legs, and the fizzy liquid is being pumped up from below, circulating around and filling your icy balls, and then emerging from the end of your cock, nice and chilled. The feeling of it emerging is like an unending ejaculation, and you whimper quietly from the sensation.
 
 The buck grabs one of the glass flutes on the table and holds it under the stream, letting the flute fill up. He takes a sip, swirling it around in his mouth a bit. &quot;Ahh,&quot; he says, &quot;that&#39;s good champagne. I think you&#39;ll be very popular tonight!&quot;
 
@@ -950,9 +969,9 @@ By now the ice has reached your mid-chest, and you feel something akin to heartb
 
 Your eyes glaze over as the transformation nears completion, your vision distorting and blurring as your eyes turn to ice. Your ear gives one final twitch as the ice overtakes it, and you move no more.
 
-With the show over, the assembled crowd go back to their duties, setting the terrace up for the company event. You stand there, unmmoving, focusing on the only thing you can - the orgasmic feeling of chilled champagne fountaining out of your cock. It&#39;s blissful and overwhelming at the same time, but you quickly grow to love it.
+With the show over, the assembled crowd go back to their duties, setting the terrace up for the company event. You stand there, unmoving, focusing on the only thing you can - the orgasmic feeling of chilled champagne fountaining out of your cock. It&#39;s blissful and overwhelming at the same time, but you quickly grow to love it.
 
-Eventually the setup is finished, and some time later people in business suits begin streaming into the space, grabbing tiny sandwiches and hors d&#39;ouevres and babbling to each other.
+Eventually the setup is finished, and some time later people in business suits begin streaming into the space, grabbing tiny sandwiches and hors d&#39;oeuvres and babbling to each other.
 
 You&#39;re a star of the show, and nearly everyone makes a point of grabbing a glass flute and filling it up with your champagne, remarking as they do on what an attractive sculpture you make.
 
@@ -963,7 +982,7 @@ The event only lasts a few hours, and then the event staff expertly cleans up an
 Thankfully, you know it won&#39;t be long til you&#39;re on display and pouring champagne once again.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Underwear" tags="ending-done" position="1125,375" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Underwear" tags="ending-done" position="1100,350" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
 Cassel nods and smiles. &quot;Fantastic!&quot; he says. &quot;Now, you&#39;re gonna be getting real close and personal with the client for the next year, so I hope you&#39;re ready for that!&quot; He produces some paperwork from his desk and passes you a pen to sign.
 
 Once the paperwork is out of the way, he makes a phone call and bids you to wait for a few minutes.
@@ -999,16 +1018,163 @@ You hear Cassel return to the room, and he exchanges some words with the tiger. 
 All the while you&#39;ve got a faceful of tiger crotch, and you can&#39;t think of anywhere else you&#39;d rather be. It&#39;s gonna be a great year. You hope that he wears you often, and prays he remembers to wash you.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Socks" tags="ending" position="1125,475" size="100,100">&lt;h2&gt;Ending - Socks&lt;/h2&gt;
-(Ending not written yet) You get turned into socks
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Socks" tags="ending-done" position="1100,450" size="100,100">&lt;h2&gt;Ending - Socks&lt;/h2&gt;
+Cassel seems a little surprised. &quot;To be honest,&quot; he says, &quot;I didn&#39;t think anyone would take this one. It sounds like a rather... high intensity job.&quot;
+
+You assure him you&#39;re up to the task, and seeming convinced, he takes out some paperwork from a drawer in his desk for you to sign. He tells you to head to the Pump &amp; Go Gym and promises he&#39;ll call ahead to let the lead trainer know you&#39;re on your way.
+
+At the gym, you&#39;re met by a tall and muscular wolf, who introduces himself as Jackie, the lead trainer. &quot;You&#39;re gonna be my socks for the next year, huh?&quot; he says, appraising you. &quot;I tend to work hard, so I hope you&#39;ll be able to keep up!&quot;
+
+He leads you through the gym to the staff room at the back, shooing out some trainers on a break. &quot;Alright, no time like the present. Let&#39;s get you changed so I can get back out on the floor. I&#39;ve got a client in 15 and then my own workout to do.&quot;
+
+The wolf gestures for you to strip down, putting your clothes into his personal locker. You stand before him awkwardly, keenly aware that your body isn&#39;t quite at his level of fitness. You shake the feeling, though, keeping in mind that in a few minutes, that isn&#39;t going to matter.
+
+The wolf strides over to the staff sofa, sitting down on it and kicking off his trainers. He peels off his old socks - you catch a whiff of them as he does - and tosses them into the bin across the room with impressive accuracy.
+
+&quot;Maybe it&#39;ll help for you to get a closer look at where you&#39;re gonna be spending the next year, huh? Go ahead, get down there.&quot; He puts his feet up on the coffee table, kicking a half-empty protein shaker bottle out of the way.
+
+Somewhat hesitantly, you get down on your knees in front of him, seeing his big wolf paws up close. You reach out to feel them, glancing nervously up at the wolf. He&#39;s got his head tilted back, quietly enjoying as you start to play with his paws.
+
+Inhaling, you smell his natural musk, and rather than off-putting, it only makes you want to get closer to those paws. Really hoping you&#39;re not crossing a line, and before you can stop yourself, your tongue darts out of your mouth and traces its way up his paw.
+
+The wolf lets out a low moan, so you continue, licking his paws and kneading them with your hands. You&#39;re getting so into it that you don&#39;t even notice that you haven&#39;t been able to feel your legs for some time. It&#39;s only when you begin sinking down towards the floor, away from his delicious paws, that you look down in surprise and see that your legs have taken on a white cottony texture and now end in a rounded shape rather than in paws.
+
+As you slide down away from his paws you grab onto them desperately, hauling yourself up onto the coffee table so you can continue worshipping them as you change.
+
+The white cottony texture spreads up your body, your hard and twitching cock disappearing into fabric as you change. Your body begins splitting in two from your groin upwards along with the change, and you realize that you&#39;re bifurcating into two separate socks.
+
+You keep trying to lick and caress his paws, but your tongue is drying out and you cough. Your arms are becoming weaker, eventually going limp and merging into your sides. You fall forwards, facefirst into his pawpad, and feel it against your face as the change nears completion.
+
+Suddenly, disorientingly, your whole self splits in two, your mouth forming the opening of the sock - both socks! You can feel yourself in two places at once, laying limp on either side of his paws on the coffee table. You can&#39;t move even a muscle, nor speak at all. You can only lay there as the wolf finally sits up, picks you up in his hands and inspects you.
+
+&quot;Mmm, nice clean white socks. Well, we&#39;ll see how clean you are at the end of the day. Let&#39;s get you on,&quot; he says, and begins stretching your mouth open and wiggling his toes into your opening.
+
+You can feel his foot as it slides in, stretching your body and filling you completely. Well, filling &lt;i&gt;half&lt;/i&gt; of you completely. The other half shortly follows, and you find yourself wrapped around the wolf&#39;s paws, hugging them tightly and soaking in his warmth and musk.
+
+You feel a pressure from the outside as the wolf slips his feet into his trainers, lacing them up and standing up.
+
+Oh, gods, the feeling as he walks on you. With each step you feel his paws pressing down on you from within, and it feels incredible. You quickly realize that you love nothing more than being wrapped around his paws, so close to them.
+
+Time in the dark, tight confines of his shoes passes quickly. You&#39;re acutely aware of his steps, then later, his runs, relishing the feeling of his paws pressing against you.
+
+Eventually you&#39;re freed from your shoe prison, but it&#39;s a fleeting enjoyment as he begins to peel you off his feet. Noooo, you want to cry, becoming filled with a profound emptiness. You crave to wrap yourself around his musky paws again, and a few minutes later get your wish. To your disappointment, when his paws fill you next, they smell much cleaner and are slightly damp with water. But you don&#39;t mind. Whatever state his paws are in, you&#39;re just happy they&#39;re in you.
+
+Now, and for the whole next year.
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Pup Gear" tags="ending" position="1125,575" size="100,100">&lt;h2&gt;Ending - Pup Gear&lt;/h2&gt;
-(Ending not written yet) You get turned into pup gear
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="23" name="Pup Gear" tags="ending-done" position="1100,550" size="100,100">&lt;h2&gt;Ending - Pup Gear&lt;/h2&gt;
+Cassel takes out some paperwork from a drawer in his desk and passes it over to you. &quot;Happy to hear that. I&#39;m sure you and the client will grow very close over the next year. Just sign this contract and then you can head over to meet him!&quot;
+
+You grab a pen from the cup on the desk and scribble your name, barely reading the pages of legalese. You shake Cassel&#39;s hand and thank him for the opportunity, and he gives you a slip of paper with the client&#39;s address on it.
+
+The address turns out to be the apartment of a handsome and muscular boar wearing nothing more than a tight jockstrap that accentuates his bulging member, who welcomes you in when you explain you&#39;re from the temp agency. He seems somewhat familiar to you, but you can&#39;t quite place where from.
+
+&quot;Ah, you&#39;re just in time,&quot; he says. &quot;I&#39;ve got a gig tonight and wanted a new outfit to wear! You&#39;ll do perfectly, I&#39;m sure.&quot;
+
+&quot;I&#39;m a gogo dancer over at The Manhole,&quot; he adds, answering your unspoken question. &quot;I&#39;m sure I&#39;ll have hands all over me - more than usual, anyway - with you on my body!&quot; It suddenly clicks that you&#39;ve seen him before at the club... and also in certain videos on the internet.
+
+He chuckles and claps his hands together. &quot;Alright, well, let&#39;s get started then. Uh, this&#39;ll probably be easier if you take your clothes off.&quot; The boar gestures to a small box on the table. &quot;You can put them in there and I&#39;ll make sure everything&#39;s safe and sound for you when your contract&#39;s up.&quot;
+
+You&#39;re suddenly very shy, realizing that you&#39;re in the home of a hot porn star and gogo dancer, and he&#39;s asking you to strip naked for him! Your cock betrays you, growing harder as you peel your clothes off, leaving you with nothing to hide your erection as it bobs in front of you.
+
+The boar laughs good-naturedly and steps a little closer to you. He cups a hand around your balls and your cock twitches. &quot;Oh, my friend, you&#39;re gonna be getting closer to me and spending more time with me than anyone else this next year,&quot; he purrs in your ear. You whimper a little.
+
+&quot;You&#39;re gonna-- oh!&quot; You feel a strange sensation and the boar steps back, holding up your cock and balls in his hand. &quot;Huh, looks like you&#39;re making me some toys to play with too!&quot;
+
+You look down at your groin, and where your cock and balls were is now just a smooth patch. You look back up at your bits in his palm and he gives them an experimental stroke. You nearly collapse back at the sensation, still fully able to feel it.
+
+&quot;Oh I&#39;m gonna have to explore this later,&quot; he says devilishly, setting your dildo carefully on the table.
+
+You reach out to pick it up and see for yourself, but as you extend your arms you notice that your paws have started to change shape, becoming big plump leather mittens with rubber paw prints on the end. You inspect them in wonder, and then with a small &lt;i&gt;pop!&lt;/i&gt; they both fall off and drop to the floor.
+
+&quot;Excellent, paw gloves!&quot; the boar says, picking them up for you and putting them on the table. Your pawless stumps have begun to retract into your torso, leaving you standing there armless after a few seconds.
+
+Your knees become a bit itchy, and you look down to see them changing color and texture. &quot;Ah, let&#39;s get you over to the sofa before you fall down and hurt yourself!&quot;
+
+The boar carefully guides you to the sofa, and you walk awkwardly with your stiffening legs. You are set down on the sofa just in time, as your feet begin to retract into your legs and your knees pop off, leaving a pair of comfortable and protective kneepads.
+
+The rest of your legs melt away into your torso, and you are briefly no more than a body pillow on the sofa for the boar. He runs a teasing finger up from your null crotch towards your chest, pausing to do a few circles around one of your nipples. You tip your head back and let out a low moan and he chuckles.
+
+The smell of leather begins to fill your nose, and you open your eyes to look down your snout. Your face has begun to change, your nose and snout taking on a shiny black leather texture. You try to open your mouth to say something, but it&#39;s lost to you being unable to manipulate your face any more.
+
+With a dizzying lurch, your head falls of your torso and tips forward. With catlike reflexes the boar catches you, grabbing your head before it topples to the floor. He spins you around to see your torso, which now is quickly changing shape. Your nipples become silver rings, your chest, shoulders, and back becoming leather strips and buckles. In moments, your torso has become a beautiful-looking leather harness. Below it, your tail has shrunk down and become nothing more than a bouncy rubber tail plug.
+
+&quot;Damn,&quot; the boar says, &quot;you look like excellent gear indeed. Let&#39;s put you on, eh?&quot;
+
+You feel a particularly strange sensation as the boar lifts your head up and sticks his head inside, filling the mask with his own face. He reaches back and adjusts the straps on the back of your head, tightening it to fit perfectly.
+
+Then he grabs the harness and pulls it over him, and you feel a jolt of pleasure as your nipple-rings rub against his chest.
+
+The tail plug is next. He grabs a bottle of lube from beside the sofa and lubes up the plug, deftly inserting it inside him. You can feel your tail wagging as he shakes his hips.
+
+The boar puts the paw mitts on and walks over to his bedroom to admire himself in the mirror. You can see him wearing you, and you agree wholeheartedly with him when he says aloud how good you look. He admires his new gear for a few moments, taking a few pictures to post on social media.
+
+Then he removes the paw mitts, pops out the tail plug and sets them aside. &quot;I didn&#39;t forget about this,&quot; he says, striding back to the main room and grabbing your cock dildo. You can feel his hand wrapped around you and you hope dearly that this particular kind of dildo is able to cum.
+
+&quot;I&#39;ve got to head to the club soon, but I think I&#39;ve got enough time to take you for a ride first,&quot; he says. He grabs the lube bottle again and retreats back to the bedroom, lubing up your cock with firm, skillful strokes.
+
+Then, positioning his tailhole above you, he begins to lower himself down.
+
+If you were in any way capable of gasping, you would. Here was a porn star you have busted more than a few nuts to, about to sit on your cock! And whats more, you&#39;re his for the next year!
+
+He starts to ride you, his hot, tight hole squeezing around your dildo as he plunges it in and out. He pulls his cock out from his jockstrap, jerking himself in time with his motions on your cock.
+
+With dismay, you realize that you&#39;ll be unable to cum in this form, even though you can feel the orgasm building. Desperately, you wish you could cum, but you can do nothing more than ram against his prostate again and again until, with a roar, he cums, unleashing a torrent onto his bedsheets. You can feel his hole spasming, clenching tightly against your shaft as he cums. Your edge-of-orgasm feeling doesn&#39;t seem to be going away, and you eventually discover that it takes hours to fully subside.
+
+&quot;Ahh, fuck!&quot; he says, panting. He leaves you inside him for a few moments, then slowly slides you out.
+
+Removing the rest of his gear, he carries your cock into the shower and washes it off as he showers and prepares for his club gig. Donning your pup hood and harness again after he&#39;s nice and clean, he pops the tail plug back in and grabs his phone and keys, setting off for The Manhole.
+
+Getting sweaty dancing in the club - you really learn to appreciate the smell of his unique musk as it sinks into your mask and harness, though he does clean you regularly - being worn in video and photoshoots (I&#39;m almost famous! you think, if only anyone knew that I was more than just his gear), and of course being worn and ridden during his off-camera activities, too. As you bask in the feeling of being used by him, you realize with glee tha this&#39;ll be your life for the next year. 
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Beachball" tags="ending" position="1075,675" size="100,100">&lt;h2&gt;Ending - Beachball&lt;/h2&gt;
-(Ending not written yet) You get turned into a beachball
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="24" name="Beachball" tags="ending-done" position="1300,450" size="100,100">&lt;h2&gt;Ending - Beachball&lt;/h2&gt;
+&quot;Great! Let me get you the contract to sign and you can look it over while I let the client know that you&#39;ll be on your way to meet him shortly.&quot; Cassel rummages in his desk for a moment and produces some paper, which he slides over to you and picks up the phone while you sign the many pages.
+
+As you set down the pen, he hangs up the phone. &quot;The client will be waiting for you down at the beach, so head on down there and have fun!&quot; Cassel sees you to the door, and you head out.
+
+Down at the beach, you&#39;re met by a short but very fit otter. &quot;Hey bro!&quot; he says as you arrive. &quot;You&#39;re gonna be my new beachball, eh?&quot; He looks you up and down. You nod, a little unsure. &quot;Great! Okay, come with me bro, let&#39;s go meet the others.&quot;
+
+He leads you a little ways down the beach to the clothing-optional section, where a group is chilling in the sand. He introduces you as their next plaything and there are appreciative nods all around and a few chuckles.
+
+&quot;Well, let&#39;s get to it!&quot; the otter announces. &quot;I don&#39;t want ya to rip your clothes when you change, so ya better strip down!&quot; Normally you&#39;d feel pretty self-conscious about getting naked in front of a bunch of eagerly-awaiting strangers, but given that this is the nude part of the beach, your bits aren&#39;t the only ones already hanging out in the afternoon sun.
+
+You dutifully remove your clothes, and one of the group offers up a shopping bag for you to put them in so they don&#39;t get all sandy. You stand there, slightly embarrassed, as they all stare at you.
+
+&quot;Oh! There he goes!&quot; one of them announces with a giggle. You&#39;re about to ask what he means when you feel a bit of a tightening in your gut. Looking down, you see your belly starting to expand. At first, it just looks like you&#39;ve eaten a particularly-filling meal, but even as you watch your gut continues to balloon out more.
+
+The otter gives your belly a poke with one of his fingers. It feels very tight but not at all unpleasant.
+
+Worrying that you&#39;ll become unbalanced as you swell out more, you sit down in the sand and rub your round belly. Your fur has begun to disappear, your belly taking on a shiny appearance that glitters in the sunlight. Your feet carve tracks in the sand as they begin to retract, your legs disappearing into your continually-expanding form.
+
+This does unbalance you, and you fall backwards onto your back, your big round shiny belly pointing up towards the sky.
+
+Your cock feels slightly strange and, with some difficulty, you reach around your belly to grope for it. Instead of your cock, however, you find only a plastic valve, and briefly wonder what it would feel like to pop it open.
+
+You don&#39;t get the chance to find out, however, as you lose grip on your cock valve and your arms begin to shrink down, disappearing into your shoulders.
+
+Your round belly makes up almost all of you now, and as your head begins to sink down and merge into it, you start to roll over uncontrolled and your whole being shrinks down into a more manageable size. In a few moments, you&#39;re nothing but a perfectly round, shiny beachball sitting in the sand.
+
+The otter reaches down and picks you up, having no difficulty lifting your air-filled self. &quot;Sweeeeeet! Bro, you look amazing!&quot; he says. Then, without warning, he bats you high up into the air.
+
+The others laugh and scramble to their feet, leaping and jumping to hit you up again before you can touch the sand.
+
+And so begins their first game, keeping you up in the air as long as possible. Each hit is painless and surprisingly pleasurable, and you enjoy letting them bat you around as the afternoon wears on.
+
+Eventually they need a break and they let you fall to the sand, sitting down themselves to enjoy some cool drinks. The wind sends you tumbling down the beach, and one of them has to chase you down before you blow into the water and get carried away by the surf.
+
+You&#39;re played with for the rest of the afternoon, til eventually it&#39;s time to go home. &quot;I&#39;d love to take you home like this, bro,&quot; the otter tells you, &quot;but you won&#39;t fit in my car! Guess I gotta let your air out first.&quot;
+
+You can feel him fiddling with your air valve, and then a sudden orgasmic rush of pleasure fills your mind as air begins rushing out of you.
+
+Along with the air, you also feel your thoughts slowing down and draining away. It becomes harder to think, the emptier you are and the more your round form deflates and deforms, until you are fully devoid of air and thoughts. Just existing dumbly, nothing more than an empty beachball.
+
+It feels like no time passes, then suddenly you become aware of receiving a blow job. Like coming out of a deep sleep, you slowly awaken, air filling you again blow by pleasurable blow. You wish desperately that you could cum from how the otter&#39;s mouth on your valve feels, but know that it&#39;s an impossibility, so you just enjoy the feeling of growing larger and tighter and more deliciously full of air.
+
+Ready to be played with again, and again, and again.
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Rubber Drone" tags="ending-done" position="1225,375" size="100,100">&lt;h2&gt;Ending - Drone&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="25" name="Rubber Drone" tags="ending-done" position="1200,350" size="100,100">&lt;h2&gt;Ending - Drone&lt;/h2&gt;
 Cassel nods knowingly. &quot;I&#39;m sure that you&#39;ll enjoy it,&quot; he tells you. &quot;You&#39;ll be contracted with HIVE Corp. for the next year, so if you can just sign this paperwork we can get you started.&quot; He produces some paperwork and a pen, and you obligingly sign your name.
 
 After the paperwork is all squared away, he sends you off to the HIVE Corp. headquarters, where you&#39;re met by a no-nonsense doberman who leads you through a labyrinth of corridors to a white room with a one-way mirror, a grated floor, and what looks like a showerhead in the ceiling.
@@ -1058,7 +1224,7 @@ Yes, you&#39;ll obey.
 &quot;Conditioning stage one complete. Beginning stage two.&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Fursuit" tags="ending-done" position="1225,475" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="26" name="Fursuit" tags="ending-done" position="1200,450" size="100,100">&lt;h2&gt;Ending - Fursuit&lt;/h2&gt;
 Cassel nods and pulls out some paperwork. &quot;Glad to hear it! The client says he&#39;s got a con coming up and would love to have a full suit to wear, so I&#39;m sure you&#39;ll do nicely.&quot; He pushes the paperwork toward you. &quot;Just sign this contract here, and you&#39;ll be his to wear for the next year!&quot;
 
 As you take a quick read through the paperwork (and the legalese swims in front of your eyes), the fennec makes a quick call on his desktop phone to let the client know you&#39;ve signed on.
@@ -1079,7 +1245,7 @@ Your giggle turns into a brief cough as you feel your mouth drying out. Your ton
 
 You begin feeling lightheaded and sway on your feet, your legs shaking as they hollow out and struggle to support your body.
 
-All at once several things happen. The fox leaps forward to catch you as you collapse, your body folding on itself as your fabric and foam body is unable to hold you up. As the fox grabs you, your head tips forward, detaching from your neck and rolling over his back in a dizzing circle.
+All at once several things happen. The fox leaps forward to catch you as you collapse, your body folding on itself as your fabric and foam body is unable to hold you up. As the fox grabs you, your head tips forward, detaching from your neck and rolling over his back in a dizzying circle.
 
 You see the carpet rush up towards you and try to wince in anticipation of the blow, but are unable to move your face even a little. Hitting the ground doesn&#39;t hurt at all though, and your head rolls over enough for you to see the fox gently lowering your headless and pawless bodysuit down onto the chair. The feet detach as he does so, leaving you spread into multiple different parts.
 
@@ -1104,10 +1270,49 @@ You can tell that you&#39;re a big hit right away. Lots of people stop to compli
 While it&#39;s disorienting and strange feeling someone moving you from within, and even more disorienting when they get out of you and leave your disembodied parties strewn about the room, you know that you&#39;re gonna have a very fun year.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="Coffee Machine" tags="ending" position="1225,575" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
-(Ending not written yet) You get turned into a coffee machine
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="27" name="Coffee Machine" tags="ending-done" position="1200,550" size="100,100">&lt;h2&gt;Ending - Coffee Machine&lt;/h2&gt;
+&quot;Mmm, excellent,&quot; Cassel says to you. &quot;I&#39;ll try to stop by the shop and get a cup from you sometime!&quot; He takes some papers out of his desk, a contract, and slides it over to you along with a pen. &quot;Just sign this and then make your way over to the shop!&quot;
+
+You sign the contract, then give him a hearty handshake before departing for the Ejaculatte Coffee shop. When you arrive, there&#39;s a queue snaking out the door along with the delicious aroma of fresh-brewed coffee. People give you dirty look as you skip the line to slip inside, but when you explain you&#39;re there to work they quit their grumbling.
+
+The harried-looking barista behind the counter is extremely relieved you&#39;re there, and wants to get you started immediately. He tells you to head to the staff room behind the counter, and that he&#39;ll come and collect you as soon as he&#39;s got a moment.
+
+&quot;I&#39;d love to supervise the changes,&quot; the corgi tells you, &quot;but as you can see I&#39;m totally swamped here. Just go get changed - remember to strip down first! - and it&#39;ll really help me get a load off!&quot;
+
+It&#39;s clear that their equipment on hand isn&#39;t enough to deal with the influx of customers, so you quickly duck past the queue of thirsty customers and into the small staff room behind the counter.
+
+Doing as instructed, you strip down, placing your clothing and effects on the small sofa. You stand in the middle of the room and wait for something to happen.
+
+And sure enough, moments later you feel an itch on your back. You reach back to scratch it, but find your arm to be uncooperative. It tries to reach back but can&#39;t quite get there, and the itch is spreading wide across your back.
+
+In fact, your whole back - and torso - appears to be getting wider. Your perspective shifts lower towards the floor as your legs begin to shorten and sink into your body, til they&#39;re nothing more than nubs that merge together to form a base.
+
+Your cock, flopping free, starts to harden. But rather than getting erect, it appears to be transforming into a handle of some sort. You&#39;re tempted to reach down and see what happens if you pull the handle, but the realization that your arms have begun shrinking down and merging into your body as well put an end to that impulse.
+
+On your top of your right shoulder, what at first looks like a tumor begins to sprout, but quickly becomes a clear plastic hopper that one can dump coffee beans in. You wonder what part of your internals have rearranged themselves to grind up the beans, but are sure you&#39;ll find out.
+
+On your wide, stout chest you can see a variety of buttons appearing, all to adjust the various settings. Your nipples become two dials on either side, and you shudder in imagined pleasure at how it&#39;ll feel when someone twists them.
+
+You suddenly smell a whiff of coffee and close your eyes to fully appreciate the aroma, finding after you&#39;ve done so that you&#39;re unable to open them again. You can feel your body continuing to shift and arrange itself. Most bizarrely, you feel your urethra redirect itself down below the base of the handle that was your cock, and you vibrate a little with the knowledge of what that&#39;s going to mean.
+
+A few minutes later the door to the staff room opens and the corgi hurries inside, finding you on the floor. &quot;Ah, perfect!&quot; he says, bending down to pick you up. &quot;Lets get you set up before they eat me alive out there.&quot;
+
+He carries you out to general applause and cheering, setting you on the back counter. He plugs in the power cord that was your tail and you feel energy coursing through you. Opening your hopper, he dumps in a bag of fresh beans and begins fiddling with your controls. You were right, it does feel great when he turns those dials.
+
+You start to hum and vibrate, and accept some of the coffee beans in the hopper into you, grinding them and moving them around inside you. Being so close to the smell of freshly-ground beans is heavenly, and you temporarily lose yourself in the incredible aroma until you are jerked back to the present by the corgi putting his hand on your cock handle.
+
+He gives it a tug to the side, and it suddenly feels like you need to cum. You release, and steaming hot coffee gushes out of you into the waiting cup. As he pulls your handle back to the closed position, the coffee eruption slows to a trickle, leaving your mind reeling at the suddenness of the orgasmic feeling.
+
+You don&#39;t have long to recover, though, before he&#39;s pulling another coffee and the sensation washes over you again.
+
+All through the day, you&#39;re used well and frequently, pulling coffee for eager customers who sip your fresh brew and comment on its distinctly delicious taste.
+
+Their praise makes you feel really good - almost nearly as good as it feels every time the corgi tugs on your handle and an orgasmic rush overcomes you.
+
+This, you think as you dispense the hundredth (or more, you&#39;ve lost count) coffee of the day, is a job you&#39;re going to enjoy very much.
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="29" name="end_Security" tags="" position="1025,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="28" name="end_Security" tags="" position="1050,675" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;&lt;h2&gt;Caught!&lt;/h2&gt;
 The door opens, catching you off guard. &quot;Snooping around, eh?&quot; the fennec fox says, his hands on his hips. &quot;Seems we need a bit better security here... and you&#39;ll do just fine.&quot;
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
@@ -1117,12 +1322,12 @@ The door opens, catching you off guard. &quot;Snooping around, eh?&quot; the fen
 The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;/i&gt;?&quot; the fennec fox says, shaking his head in disappointment. &quot;I thought you&#39;d learned your lesson, but I guess not. Seems you need to spend a bit more time working in security!&quot;
 &lt;&lt;include &quot;Security Camera&quot;&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="end_Secret" tags="" position="1225,800" size="100,100">&lt;&lt;include &quot;Clone&quot;&gt;&gt;
+&lt;&lt;set $jobsTaken+=1&gt;&gt;</tw-passagedata><tw-passagedata pid="29" name="end_Secret" tags="" position="1250,675" size="100,100">&lt;&lt;include &quot;Clone&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Clone&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Clone&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;set $rejectAllAgain = 0&gt;&gt;
-&lt;&lt;set $unlockedSecret = 1&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the &lt;i&gt;New You Temp Agency&lt;/i&gt;, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the &lt;i&gt;New You Temp Agency&lt;/i&gt; provides dedicated workers for short- or long-term needs!&quot;
+&lt;&lt;set $unlockedSecret = 1&gt;&gt;</tw-passagedata><tw-passagedata pid="30" name="Read the Brochures" tags="" position="250,900" size="100,100">The brochures detail the history of the &lt;i&gt;New You Temp Agency&lt;/i&gt;, and tell about how they help clients fill specific, unique positions. &quot;Whether you need a new ice sculpture for a corporate function, or a standee to advertise your business, the &lt;i&gt;New You Temp Agency&lt;/i&gt; provides dedicated workers for short- or long-term needs!&quot;
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
@@ -1134,7 +1339,7 @@ The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;
 &quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;
 
 &lt;&lt;if $doneFirstInterview == true&gt;&gt;[[Enter|ReturningEmployee]]&lt;&lt;else&gt;&gt;[[Enter]]&lt;&lt;/if&gt;&gt;
-[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Mannequin" tags="ending-done" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
+[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="31" name="Mannequin" tags="ending-done" position="1300,550" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
 &quot;Excellent choice,&quot; Cassel says, nodding. &quot;I knew you were the right one for the job.&quot; He withdraws some paperwork from his desk and slides it over to you with a pen. &quot;Just sign this contract and you can head off to your new gig!&quot;
 
 After you sign the paperwork you make your way a short distance to Sew it Would Seam, a trendy clothing store a couple streets over. The owner, a fashionable zebra, greets you as you enter.
@@ -1178,8 +1383,9 @@ You can feel the comfortable clothes hanging off your body, and the warmth of th
 As jobs go, this is one of the easiest you&#39;ve ever had. Day in and day out, you stand in the window, showing off the fashionable clothes for sale within.
 
 Every once in a while the zebra takes you apart and redresses you in something new, one of the only ways besides the waxing and waning warmth of the sun that you can use to mark the passage of time. Quite quickly you&#39;re treated just like any other mannequin in the shop - simply a decoration, a thing to wear the shop&#39;s wares. And you wouldn&#39;t have it any other way. It&#39;s what you&#39;re for, after all.
+
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="33" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;&lt;checkAllEndings&gt;&gt;&lt;&lt;if !$allUnlocked&gt;&gt;&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="32" name="ReturningEmployee" tags="" position="725,725" size="100,100">&lt;&lt;checkAllEndings&gt;&gt;&lt;&lt;if !$allUnlocked&gt;&gt;&lt;h2&gt;Cassel&#39;s Office&lt;/h2&gt;
 You enter Cassel&#39;s office. He gestures for you to take a seat and you sit on the nicely-carved oak chair in front of his desk. 
 &lt;&lt;if $pcOn is true&gt;&gt;
 	With a jolt, you realize that it&#39;s the tiger whose employee file you were reading on the computer... and you&#39;re about to sit on him! As you lower yourself down onto the surprisingly comfortable seat, you hope he doesn&#39;t mind your ass on him.
@@ -1214,7 +1420,7 @@ You enter Cassel&#39;s office. He gestures for you to take a seat and you sit on
 &lt;&lt;elseif $allUnlocked&gt;&gt;
 &lt;&lt;goto &quot;end_Secret&quot;&gt;&gt;
 &lt;&lt;else&gt;&gt;
-Something broke!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="EndingGallery" tags="" position="425,250" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
+Something broke!&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="33" name="EndingGallery" tags="" position="425,150" size="100,100">&lt;h2&gt;Ending Gallery&lt;/h2&gt;
 Here you can view the endings that you&#39;ve unlocked!
 
 &lt;table style=&quot;width:100%&quot; class=&quot;endings-table&quot; &gt;
@@ -1255,7 +1461,7 @@ Here you can view the endings that you&#39;ve unlocked!
 
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="35" name="Bug List" tags="" position="100,675" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="34" name="Bug List" tags="" position="100,600" size="100,100">- Equal-weight endings aren&#39;t randomized (Not priority)
 
 (FIXED) - Get the &quot;contract ends after a year&quot; when returning after unlocking secret ending and returning again
 		(added new code to handle returns)
@@ -1269,12 +1475,12 @@ Here you can view the endings that you&#39;ve unlocked!
 		(achieved endings aren&#39;t shown in list so their earned points don&#39;t appear)
 (FIXED) Reject All ending comes up simultaneous with Secret Ending
 (FIXED) - Questions can come up repeatedly
-(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="36" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false, $doneFirstInterview to true&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
+(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="35" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false, $doneFirstInterview to true&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;set $firstOffer to true&gt;&gt;
 	&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;rejectJobBanter&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="36" name="InterviewSetup" tags="" position="625,975" size="100,100">&lt;&lt;set $Questions = {}&gt;&gt;
 
 &lt;&lt;set $Questions.Q1 = { 
     question: &quot;Where do you see yourself in five years?\&quot;&quot;, 
@@ -1555,7 +1761,7 @@ $Questions.Q2 = {
     &lt;&lt;/link&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;/widget&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="37" name="ProcessAnswer" tags="" position="625,1075" size="100,100">:: ProcessAnswer
 &lt;&lt;set _currentQuestion = $Questions[$currentQuestionKey]&gt;&gt;
 
 &lt;&lt;if $currentAnswer == 1&gt;&gt;
@@ -1635,16 +1841,16 @@ $Questions.Q2 = {
     &lt;&lt;set $scoreMannequin += 1&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 
-&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="39" name="Desktop Toy" tags="ending-done" position="925,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
+&lt;&lt;goto &quot;InterviewQuestions&quot;&gt;&gt;</tw-passagedata><tw-passagedata pid="38" name="Desktop Toy" tags="ending-done" position="950,775" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Desktop Toy&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $deskToyAgain == 1&gt;&gt;Cassel smiles at you. &quot;Well, hopefully by the end of it, you&#39;ll have an idea in mind of what you want to do next.&quot;&lt;&lt;elseif $postEnding == 1&gt;&gt;Cassel claps his hands together and beams. &quot;Great!&quot; he says, &quot;I needed a new desk toy!&lt;&lt;else&gt;&gt;Cassel shakes his head, frustrated. &quot;Maybe a year on my desk will give you time to reflect and think about what you want to do,&quot; he growls.&lt;&lt;/if&gt;&gt;
 You open your mouth to say something, but are distracted by what&#39;s happening to your hands. Your fingers have begun to shrink and vanish into your paws, and your fur is being replaced by a reflective, shiny metal texture. As you stare, your hands seem to inflate, becoming rounder and more ball-like.
 
 Cassel steps from behind the desk. &quot;Here, let&#39;s get you out of those clothes before they start getting in the way,&quot; he says. He helps you tug off your shirt and pants, which you would otherwise have struggled with considering how useless your metal-ball hands are now.
 
-As your pants come off, you notice that your balls - your actual balls, not the ones on the ends of your arms - have begun to swell, quickly going from normal sized to kiwi sized to grapefruit and then canteloupe sized. They too begin to take on a silver shine, hanging lower and lower as they grow.
+As your pants come off, you notice that your balls - your actual balls, not the ones on the ends of your arms - have begun to swell, quickly going from normal sized to kiwi sized to grapefruit and then cantaloupe sized. They too begin to take on a silver shine, hanging lower and lower as they grow.
 
-Your cock isn&#39;t spared, either. It begins to swell between your balls, until it too is a canteloupe-sized silver ball clattering between the two that used to be your nuts.
+Your cock isn&#39;t spared, either. It begins to swell between your balls, until it too is a cantaloupe-sized silver ball clattering between the two that used to be your nuts.
 
 Cassel watches with amusement, then reaches down and lifts one of your balls, dropping it and letting it swing back towards your cock.
 
@@ -1667,7 +1873,7 @@ Cassel sits back down at his desk and starts doing some paperwork, letting your 
 On and on it goes, your only relief coming when he leaves for the night. But you know that as soon as he comes back the next morning, the cycle begins anew. Because that&#39;s all you are for the next year: a desktop toy for him to play with.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="40" name="Security Camera" tags="ending-done" position="1025,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
+[[Try Again!|Main Menu]]</tw-passagedata><tw-passagedata pid="39" name="Security Camera" tags="ending-done" position="1050,775" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Security Camera&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Security Camera&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding == 1&gt;&gt;Cassel nods happily. &quot;Great! We don&#39;t get a lot of traffic through here, but you&#39;ll certainly help keep an eye on things.&quot;&lt;br&gt;&lt;&lt;/if&gt;&gt;Quite quickly, you feel a sense of dizziness and disorientation as the ground rushes up towards you. Your legs have begun shrinking, disappearing beneath you, and you fall out of your pants and topple over onto the ground with a thump.
 
@@ -1694,7 +1900,7 @@ And so it goes, day after day, night after night, watching the comings and going
 Meanwhile you watch from the corner, back and forth, back and forth, keeping watch.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="41" name="Clone" tags="ending-done" position="1225,900" size="100,100">&lt;h2&gt;Ending - Cassel Clone&lt;/h2&gt;
+[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="40" name="Clone" tags="ending-done" position="1250,775" size="100,100">&lt;h2&gt;Ending - Cassel Clone&lt;/h2&gt;
 Cassel steeples his fingers and rests his chin on them. &quot;I&#39;ve been doing this for a long time,&quot; he says, &quot;and I rarely get to take any time off for myself.&quot;
 
 He gestures at you. &quot;And you, well, you&#39;ve been such a reliable employee these past many years. A statue, socks, my chair, and more besides. Anywhere I send you, you do a great job. So I think I know the perfect final job for you.&quot; The fennec grins. &quot;Me!&quot;
@@ -1722,52 +1928,53 @@ With a tip of his hat and a promise to send a postcard, Cassel departs, leaving 
 A few minutes later, you hear the ringing of a bell and a voice calling out, &quot;Hello? I&#39;m here to apply for a job!&quot;
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="42" name="Main Menu" tags="" position="525,350" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="41" name="Main Menu" tags="" position="525,375" size="100,100">&lt;h2&gt;Temp Agency - Main Menu&lt;/h2&gt;
 &lt;i&gt;&lt;b&gt;Temp Agency&lt;/b&gt; is a work of gay pornographic furry fiction by Ky the Capybara, and is intended only for an 18+ audience. It contains horny inanimate transformation. Play at your peril!&lt;/i&gt;
 
 Welcome to the &lt;i&gt;New You Temp Agency&lt;/i&gt;! With you resumé in hand (you did bring one, right?), you sit down for an interview to determine where you might best be placed. But this temp agency doesn&#39;t hire out for normal jobs, so be prepared!&lt;br&gt;
 &lt;&lt;nobr&gt;&gt;
-[[Walkthrough (Contains Spoilers, Duh!)|Walkthrough]]&lt;br&gt;
+[[Walkthrough (Spoilers!)|Walkthrough]]&lt;br&gt;
 [[Ending Gallery|EndingGallery]]&lt;br&gt;
 [[Update Log|Changelog]]&lt;br&gt;
 [[Credits]]&lt;br&gt;&lt;br&gt;
 &lt;&lt;button &quot;Start Game&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Current game version: v0.1&lt;/i&gt;
+&lt;&lt;/button&gt;&gt;&lt;br&gt;&lt;br&gt;&lt;i&gt;Current game version: v1.0&lt;/i&gt;
 &lt;br&gt;&lt;i&gt;I&#39;d love to hear your feedback! Drop me a message if you enjoyed the game or encountered a game-breaking bug that I need to squish! https://linktr.ee/kymaequ &lt;/i&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Walkthrough" tags="" position="625,350" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;
-Contains spoilers! Also will be written properly later.
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="42" name="Walkthrough" tags="" position="625,250" size="100,100">&lt;h2&gt;Walkthrough&lt;/h2&gt;&lt;b&gt;---WARNING, SPOILERS INSIDE!---&lt;/b&gt;
 
-For the normal endings, just get the highest score in questions for that ending, or reject jobs until you are offered the ending you want.
+If you don&#39;t want to read them, click [[here|Main Menu]] to return to the Main Menu.
 
-&lt;u&gt;&lt;b&gt;Secret Endings:&lt;/b&gt;&lt;/u&gt;
-&lt;b&gt;Desktop Toy:&lt;/b&gt; Reject all of the job offers, frustrating the manager.
-&lt;b&gt;Security Camera:&lt;/b&gt; Snoop around in the office, turning on the PC &lt;i&gt;and&lt;/i&gt; reading the message tray (in any order)
-&lt;b&gt;Revolving Door:&lt;/b&gt; From the office, leave, then start the game again. Do this repeatedly until the manager comes out.
-&lt;b&gt;Clone:&lt;/b&gt; Achieve all the normal job endings, then go for one final interview.
+&lt;&lt;linkappend &quot;&lt;b&gt;Main Endings&lt;/b&gt;&quot; t8n&gt;&gt;
+To achieve the normal endings for the game, simply play through the interview process! You&#39;ll be offered a job depending on your responses, and can choose to either accept that job (and receive its ending) or reject the job to be offered a different one. But beware what happens if you reject them all!&lt;&lt;/linkappend&gt;&gt;
 
-Currently-Complete Endings:
-- Chair
-- Statue
-- Underwear
-- Rubber Drone
-- ATM
-- Baseball Bat
-- Fursuit
-- Mannequin
-- Ice Sculpture
-- Standee
-- Secret Ending: Clone
-- Secret Ending: Desktop Toy
-- Secret Ending: Revolving Door
-- Secret Ending: Security Camera
-
+&lt;&lt;linkappend &quot;&lt;b&gt;Secret Endings&lt;/b&gt;&quot; t8n&gt;&gt;
+&lt;i&gt;Temp Agency&lt;/i&gt; features four secret endings! To achieve each of them, do the following:
+&lt;table style=&quot;width:100%&quot; class=&quot;secretendings-table&quot; &gt;
+&lt;tr&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;b&gt;Desktop Toy&lt;/b&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;Reject all of the job offers, frustrating the manager.&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;b&gt;Security Camera&lt;/b&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;Snoop around in the office, using the PC &lt;i&gt;and&lt;/i&gt; reading the message tray (in either order)&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;b&gt;Revolving Door&lt;/b&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;From the office, leave, then start the game again. Do this repeatedly until the manager comes out in annoyance.&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+  &lt;/tr&gt;
+    &lt;tr&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;&lt;b&gt;Clone&lt;/b&gt;&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+    &lt;td&gt;&lt;&lt;nobr&gt;&gt;Achieve all the normal job endings, then go for one final interview.&lt;&lt;/nobr&gt;&gt;&lt;/td&gt;
+  &lt;/tr&gt;&lt;/table&gt;
+  Additionally, if you have already achieved all the normal endings and received the Clone ending, returning to the Temp Agency will give you the option of easily viewing the other secret endings so that you won&#39;t be locked out of viewing them.&lt;&lt;/linkappend&gt;&gt;
+  
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Changelog" tags="" position="425,350" size="100,100">No changes.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="43" name="Changelog" tags="" position="425,250" size="100,100">v1.0 - Release version! All endings and secret endings implemented.
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Credits" tags="" position="625,250" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="44" name="Credits" tags="" position="625,150" size="100,100">&lt;h2&gt;Credits&lt;/h2&gt;
 &lt;b&gt;Temp Agency&lt;/b&gt; was made by Ky the Capybara 
 https://linktr.ee/kymaequ
 
@@ -1777,9 +1984,11 @@ https://twinery.org/
 Inspired by the amazing games that Blueballs makes! Check their FA for links to their stuff!
 https://www.furaffinity.net/user/blueballs
 
+Special thanks to Medkit for feedback and testing.
+
 &lt;&lt;button &quot;Return&quot;&gt;&gt;
 &lt;&lt;goto &quot;Main Menu&quot;&gt;&gt;
-&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
+&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="45" name="Read the Magazines" tags="" position="375,900" size="100,100">The magazines, while out of date, cover an array of topics. The one on the top of the stack has a cover feature on the dean of the local university, interviewing him about his campus&#39;s annual TF Tag game and its growing popularity. You riffle through the magazines for a little while.
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
@@ -1791,11 +2000,11 @@ https://www.furaffinity.net/user/blueballs
 &quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;
 
 &lt;&lt;if $doneFirstInterview == true&gt;&gt;[[Enter|ReturningEmployee]]&lt;&lt;else&gt;&gt;[[Enter]]&lt;&lt;/if&gt;&gt;
-[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
+[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="46" name="end_Revolving" tags="" position="1150,675" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
-&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="48" name="Revolving Door" tags="ending-done" position="1125,900" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;&lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding == 1&gt;&gt;Cassel smiles at you. &quot;It&#39;s an unusual assignment, but I&#39;m sure it&#39;ll open some new doors for you... so to speak.&quot;&lt;&lt;/if&gt;&gt;&lt;h2&gt;Ending - Revolving Door&lt;/h2&gt;
+&lt;&lt;set $jobsTaken+=1&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="Revolving Door" tags="ending-done" position="1150,775" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;&lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;&lt;&lt;/if&gt;&gt;&lt;&lt;set $extraEndings += 1&gt;&gt;&lt;&lt;if $postEnding == 1&gt;&gt;Cassel smiles at you. &quot;It&#39;s an unusual assignment, but I&#39;m sure it&#39;ll open some new doors for you... so to speak.&quot;&lt;&lt;/if&gt;&gt;&lt;h2&gt;Ending - Revolving Door&lt;/h2&gt;
 You stand by the door, confused. Your hand brushes the door and you jump with a yelp, as though you just got static shocked. But as you try to pull your hand away, you discover that it&#39;s stuck to the door!
 
 You tug and tug, but your hand doesn&#39;t come free. You brace your foot against the door for more leverage, but your foot becomes stuck as well!
@@ -1825,7 +2034,7 @@ You stand there, unmoving, for quite a time, but eventually feel a pressure on y
 And so it will go, being granted a new view each time someone comes and goes, spinning, spinning, spinning. Nothing more than a door to a place that gives applicants like you a new job for at least the next year...
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="49" name="password" tags="" position="1000,100" size="100,100">&lt;&lt;set _answer to &quot;&quot;&gt;&gt;This game is still under construction! Unless you&#39;re testing it, please check back another time!
+[[Try Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="48" name="password" tags="" position="100,725" size="100,100">&lt;&lt;set _answer to &quot;&quot;&gt;&gt;This game is still under construction! Unless you&#39;re testing it, please check back another time!
 
 Please enter the password to continue:
 
