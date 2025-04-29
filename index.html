@@ -238,7 +238,7 @@ A few moments later the door behind the desk opens and you see a fennec fox. He 
   &lt;&lt;if $rejectAllAgain &lt; 1&gt;&gt;
      &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Clone&quot;)&gt;&gt;
      You approach the desk and ring the bell for service. The indistinct voice on the phone suddenly quiets, then a few moments later a familiar fennec appears at the door. &quot;Oh hey!&quot; he exclaims. &quot;You&#39;re back for more, eh? Well, come on in!&quot;
-       &lt;br&gt;&lt;br&gt;[[Continue|ReturningEmployee]] 
+       &lt;&lt;if $doneFirstInterview == true&gt;&gt;&lt;br&gt;&lt;br&gt;[[Continue|ReturningEmployee]]&lt;&lt;else&gt;&gt;&lt;br&gt;&lt;br&gt;[[Continue|Enter]]&lt;&lt;/if&gt;&gt; 
      &lt;&lt;else&gt;&gt;
      You approach the desk and ring the bell for service. A few moments later, Cassel opens the door.
      &lt;br&gt;&lt;br&gt;&quot;You&#39;re back... again??? Listen, I&#39;m sorry to tell you this, but I really don&#39;t have any more positions for you. You&#39;ve done them all! Go... retire! You&#39;ve spent so much time as &lt;i&gt;things&lt;/i&gt; that I&#39;m sure you haven&#39;t spent any of the money gathering in your bank account. Live your life! Or go enroll in the university. I&#39;ve heard they have an annual TF Tag game that you might like.&quot;
@@ -342,7 +342,7 @@ You sit and wait for a while. Eventually the voice on the phone stops talking, a
 &lt;&lt;else&gt;&gt;
 You sit and wait for a while. Eventually the voice on the phone stops talking, and a familiar fennec appears at the door. &quot;Oh hey!&quot; he exclaims. &quot;You&#39;re back for more, eh? Well, come on in!&quot;
 
-[[Enter|ReturningEmployee]]
+&lt;&lt;if $doneFirstInterview == true&gt;&gt;&lt;br&gt;&lt;br&gt;[[Continue|ReturningEmployee]]&lt;&lt;else&gt;&gt;&lt;br&gt;&lt;br&gt;[[Continue|Enter]]&lt;&lt;/if&gt;&gt; 
 [[On second thought...|Leave]]
 &lt;&lt;/if&gt;&gt;&lt;&lt;else&gt;&gt;You sit and wait for a while. Eventually the voice on the phone stops talking, and a familiar fennec appears at the door.
 
@@ -441,7 +441,7 @@ You nod.
   &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="13" name="StoryInit" tags="" position="525,250" size="100,100">&lt;&lt;set $priorEndings to []&gt;&gt;
 &lt;&lt;set $scoreChair = 0, $scoreATM = 0, $scoreStandee = 0, $scoreStatue = 0, $scoreBat = 0, $scoreTubeman = 0, $scoreIce = 0, $scoreUnderwear = 0, $scoreSocks = 0, $scoreBeachball = 0, $scoreDrone = 0, $scoreFursuit = 0, $scoreCoffee = 0, $scorePup = 0, $scoreMannequin = 0, $leaveCount = 0, $unlockedSecret = 0, $postEnding = 0&gt;&gt;
 
-&lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0&gt;&gt;
+&lt;&lt;set $pcOn = false, $readInbox = false, $jobsTaken = 0, $noMoreEndings = false, $questionCount = 0, $firstOffer = false, $rejectCount = 0, $rejectAllAgain = 0, $doneFirstInterview = false&gt;&gt;
 
 &lt;&lt;set $Endings = {}&gt;&gt;
 
@@ -743,8 +743,47 @@ You try your best, but the feeling when they request a withdrawal is too sudden 
 Though he was worried that it would be disruptive and unappreciated, the manager is surprised by how popular your method of giving customers money turns out to be, as you quickly become the most-used ATM in the bank in only a few days... and you get to have a whole year of this.
 
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="16" name="Standee" tags="ending" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
-(Ending not written yet) You get turned into a cardboard standee
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="16" name="Standee" tags="ending-done" position="925,575" size="100,100">&lt;h2&gt;Ending - Standee&lt;/h2&gt;
+Cassel nods as you accept the offer. &quot;The owner of the shop is an old friend of mine. He might be a bit unusual, but he&#39;s passionate about what he does and I&#39;m sure he&#39;ll put you to good use.&quot; The fennec takes out some papers and slides them over to you. &quot;If you could just sign this first, we can get you on your way.&quot;
+
+You pick up a pen and sign the contract, then give the fennec&#39;s hand a hearty shake in thanks before making your way over to Grottoes &amp; Gremlins. As you enter the slightly gloomy comic and collectibles shop, you find the leopard owner engaged in a hot debate with a customer about the merits of second edition something-or-other over fifth edition, though they both agree that fourth edition is objectively &lt;i&gt;the worst&lt;/i&gt;.
+
+&quot;Ah, welcome to G&amp;G!&quot; the leopard says, noticing your entry. You try not to wrinkle your nose a bit at the slight tang of stale sweat that permeates the shop. As the leopard turns his attention to you, the customer he was talking to moves off to inspect a glass cabinet of mini monster collectible cards. &quot;Are yeh here for something in particular, or just browsin&#39;?&quot;
+
+You tell him that you&#39;re here from the temp agency, and his face lights up. &quot;Ah yes! I&#39;ve been waiting for ol&#39; Cassel to send someone over!&quot; He looks you up and down briefly. &quot;Yeh&#39;ll definitely do!&quot;
+
+He ducks down behind the counter to rummange for something, and emerges moments later holding a wizard costume and a small chalkboard.
+
+&quot;Yeh&#39;ll need to put this on, first,&quot; he tells you, passing you the costume over the counter. &quot;Can&#39;t have yeh advertising the store lookin&#39; like &lt;i&gt;that&lt;/i&gt;!&quot; You look down at your outfit, feeling mildly offended. But you shrug and go into the shop&#39;s restroom to change, coming out a few minutes later feeling extremely silly.
+
+The leopard doesn&#39;t laugh, however. He nods approvingly, and hands you the blackboard. &quot;Lookin&#39; perfect! Now hold this and look sagely!&quot;
+
+Not entirely sure how to &quot;look sagely&quot;, you screw up your face in concentration like you&#39;re pretending to throw a fireball or something. This seems to be exactly what the leopard wanted, however, as he nods again.
+
+&quot;Now just stay still while... oop, there we go!&quot;
+
+You want to ask him what he means, but suddenly discover that you can&#39;t really move your face anymore - or anything else, for that matter - which is a relief, because your face muscles were starting to get sore holding that expression.
+
+You can see in your field of view your snout seemingly flattening into your face. You catch sight of your reflection in the mirror behind the shop counter and you don&#39;t seem to look any different from that angle, but your face definitely &lt;i&gt;feels&lt;/i&gt; flatter. You try to look down, but your eyes seem to be locked ahead.
+
+Your arm, which was extended out away from you casting the imaginary fireball, also flattens down against you. In fact, all of you seems to be becoming flatter! Your body gives a wobble and you fall backwards, tensing up in anticipation of landing heavily, but instead you just kind of &quot;flumph&quot; onto the well-trod carpet.
+
+Staring up at the ceiling, from which a slightly dusty scale model of the NCC 1069-D hangs, you feel like the air is being squeezed from your lungs. Your vision changes a little as you sink deeper towards the floor, your whole body flattening out until it&#39;s only a centimetre thick.
+
+A few moments later, the leopard looms over you. &quot;Perfect! Yeh&#39;ll look great outside the shop!&quot; He reaches down and lifts you up with ease. In addition to becoming flatter, you realize, the transformation must have made you much lighter, too. You&#39;ve no way to tell, but you expect that you&#39;re now made of some lightweight material like cardboard.
+
+The leopard carries you under his arm - your nose appears to still be working, as you get a whiff of his natural underarm fragrance - and brings you outside to the sidewalk. He fiddles with something behind you, and you feel like a part of you is being bent. Then he sets you down and you stand upright - well, with a slight tilt backwards.
+
+He disappears out of view and you hear the chime of the shop&#39;s door behind you. A few moments later he reappears, wielding a stub of chalk. He reaches towards you and writes something on the blackboard you carry that has been flattened and fused into your form with you. Patting your flat shoulder, he says, &quot;Now, bring me lots of customers, yeh hear?&quot; He chuckles and goes back into the shop.
+
+As people pass by on the street, you can feel their eyes on you, and you start to feel very silly indeed. Dressed up like some ridiculous wizard, flattened into a standee and posed outside the shop, all you can do is stand there and hope no one you know recognizes you.
+
+At closing time in the evening, the leopard carries you back into the shop, leaving you just inside the dark store until the next morning, when your job on the sidewalk resumes.
+
+It&#39;s not a particularly exciting gig, but you do feel a little rush of pride every time someone looks at you and then goes into the shop, and your self-consciousness ebbs away as the days wear on. You even grow to enjoy it, really. Feeling the sun on you, helping entice people into the shop. Once or twice a gust of wind blows you over, but someone always rights you again.
+
+Such is the life of a cardboard standee. Your life, for the next year.
+
 &lt;b&gt;The End!&lt;/b&gt;
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="17" name="end_Reject" tags="" position="925,800" size="100,100">&lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Desktop Toy&quot;)&gt;&gt;
 &lt;&lt;if $rejectCount &gt;= 6&gt;&gt;&lt;h2&gt;Ending - Desktop Toy&lt;/h2&gt;
@@ -868,8 +907,61 @@ When the game ends, you&#39;re set down again, to wait until the next time you&#
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="20" name="Tubeman" tags="ending" position="1025,575" size="100,100">&lt;h2&gt;Ending - Inflatable Tubeman&lt;/h2&gt;
 (Ending not written yet) You get turned into a waving tubeman
 &lt;b&gt;The End!&lt;/b&gt;
-[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Ice Sculpture" tags="ending" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
-(Ending not written yet) You get turned into an ice sculpture
+[[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="21" name="Ice Sculpture" tags="ending-done" position="975,675" size="100,100">&lt;h2&gt;Ending - Ice Sculpture&lt;/h2&gt;
+&quot;Cool!&quot; Casssel laughs. &quot;Sorry, that was a poor joke.&quot; He fetches some paperwork and puts it before you to sign. &quot;Here&#39;s the contract for the job. Just need your signature and you can head to their office. I believe their function is this evening, so you&#39;ll be right on time!&quot;
+
+You pick up a pen and scribble your name on the contract, thank Cassel, and make your way to the offices of Ditcher, Quicke &amp; Hyde. When you present yourself to the receptionist in the lobby, they send you up to the terrace on the 32nd floor and phone ahead to let them know you&#39;ve arrived.
+
+The terrace is a hive of activity, with an events staff working to set up tables and decorations. You&#39;re met by a stressed-looking buck, who is visibly relieved you&#39;ve shown up.
+
+&quot;Oh thank fuck,&quot; he says, &quot;we were starting to panic that we wouldn&#39;t have a centerpiece.&quot; The buck gestures at you. &quot;Okay, we don&#39;t have time to waste, so off with those clothes and get up on that big table over there.&quot;
+
+You look around at all the people buzzing about, nervous about getting naked in front of all of them.
+
+&quot;Look, you&#39;re gonna be on full display for hundreds of people tonight, so you better get comfortable with that real fast,&quot; the buck tells you.
+
+Sighing, you strip off your clothes, grateful that nobody rushing around seems to take any notice, busy as they are with their tasks. You climb carefully up on the indicated table, standing up in a flat-bottomed basin in the middle.
+
+&quot;This will probably feel a little cold,&quot; the buck says, moments before you jolt in surprise.
+
+Your feet suddenly turn icy cold, and you look down to see that it&#39;s because they&#39;ve become just that - ice! With a crackling sound, your toes turn blue and you lose feeling in them, watching in fascination as the change spreads quickly up your ankles and calves.
+
+&quot;Do me a favour and get into position,&quot; the buck instructs. &quot;Hold your cock like you&#39;re peeing.&quot; You do so, looking around with discomfort. A couple of the event staff have paused what they&#39;re doing to watch you.
+
+&quot;Great, now put your other hand up and behind your head. Yeah, just like that.&quot;
+
+It definitely feels strange being up here like this in such a pose, especially as more and more eyes turn to watch the ice creeping up your thighs. Despite your embarrassment, you feel your cock starting to stiffen in your grasp. The people watching you stand there naked on the table &lt;i&gt;does&lt;/i&gt; kind of turn you on.
+
+But just as you finish getting hard, your balls feel really cold and the change overtakes your groin. You watch it reach the base of your shaft and creep along towards the end, your erect cock turning into solid ice in your grasp.
+
+You give it a few experimental strokes, to some laughter from the growing crowd, but can feel nothing. On the downstroke your hand suddenly gets stuck, fusing to your cock as it, too, begins to turn to ice.
+
+&quot;Yeah, you&#39;re definitely not gonna cum like that,&quot; chuckles the buck, &quot;but I think you&#39;ll find... ah, there we go.&quot;
+
+You gasp as you feel a pressure building in your cock, like you&#39;re right on the edge of coming.. Suddenly, a fizzy liquid begins to stream out, pouring down and landing in the basin at your feet, where it disappears into a small drain.
+
+You notice that there seems to be some sort of hollow channel running up one of your legs, and the fizzy liquid is being pumped up from below, circulating around and filling your icy balls, and then emerging from the end of your cock, nice and chilled. The feeling of it emerging is like an unending ejaculation, and you wimper quietly from the sensation.
+
+The buck grabs one of the glass flutes on the table and holds it under the stream, letting the flute fill up. He takes a sip, swirling it around in his mouth a bit. &quot;Ahh,&quot; he says, &quot;that&#39;s good champagne. I think you&#39;ll be very popular tonight!&quot;
+
+By now the ice has reached your mid-chest, and you feel something akin to heartburn for a few moments, until the feeling passes and your whole chest freezes. Your other arm has frozen by now as well, and the feeling of your icy hand on the back of your head makes what&#39;s left of you shiver a little.
+
+&quot;I believe your contract is for a year,&quot; the buck tells you as the ice creaks its way up your neck and freezes your jaw. &quot;Luckily for you, you won&#39;t melt, so I imagine we&#39;ll crate you up at the end of the night and save you til the next function. I think you&#39;re gonna get a lot of use this year - they like to have company events quite frequently.&quot;
+
+Your eyes glaze over as the transformation nears completion, your vision distorting and blurring as your eyes turn to ice. Your ear gives one final twitch as the ice overtakes it, and you move no more.
+
+With the show over, the assembled crowd go back to their duties, setting the terrace up for the company event. You stand there, unmmoving, focusing on the only thing you can - the orgasmic feeling of chilled champagne fountaining out of your cock. It&#39;s blissful and overwhelming at the same time, but you quickly grow to love it.
+
+Eventually the setup is finished, and some time later people in business suits begin streaming into the space, grabbing tiny sandwiches and hors d&#39;ouevres and babbling to each other.
+
+You&#39;re a star of the show, and nearly everyone makes a point of grabbing a glass flute and filling it up with your champagne, remarking as they do on what an attractive sculpture you make.
+
+Their praise fills you with warmth - well metaphorically, anyway, and you proudly display yourself for them as champagne streams from you.
+
+The event only lasts a few hours, and then the event staff expertly cleans up and takes down all the decorations. You&#39;re removed from the basin - to your disappointment, the fountain ceases the moment you&#39;re removed - and you&#39;re packed carefully away in a tall crate.
+
+Thankfully, you know it won&#39;t be long til you&#39;re on display and pouring champagne once again.
+
 &lt;b&gt;The End!&lt;/b&gt;
 [[Play Again?|Main Menu]]</tw-passagedata><tw-passagedata pid="22" name="Underwear" tags="ending-done" position="1125,375" size="100,100">&lt;h2&gt;Ending - Underwear&lt;/h2&gt;
 Cassel nods and smiles. &quot;Fantastic!&quot; he says. &quot;Now, you&#39;re gonna be getting real close and personal with the client for the next year, so I hope you&#39;re ready for that!&quot; He produces some paperwork from his desk and passes you a pen to sign.
@@ -927,7 +1019,7 @@ After the paperwork is all squared away, he sends you off to the HIVE Corp. head
 
 You hear a gurgling noise above you and look up, just in time to see a black drop drip out of the showerhead. It splashes onto your nose, and you reach up with a paw to touch it.
 
-The black goo is sticky and warm, and as you touch your nose some of it sticks to your fingers. You rub your fingers together and the goo spreads across them both, leaving your fingers shiny and rubbery-looking.
+The black goo is sticky and warm, and smells strongly of fresh latex. As you touch your nose some of it sticks to your fingers. You rub your fingers together and the goo spreads across them both, leaving your fingers shiny and rubbery-looking.
 
 You&#39;re distracted from your fingers by more goo suddenly pouring out of the showerhead, landing heavily on top of your head and beginning to coat you.
 
@@ -1034,12 +1126,15 @@ The door opens, catching you off guard. &quot;Snooping around &lt;i&gt;again&lt;
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
-&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.&lt;&lt;else&gt;&gt;As you read the brochure, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
-
-&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
+&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="32" name="Mannequin" tags="ending-done" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
+[[On second thought...|Leave]]&lt;&lt;else&gt;&gt;As you read the brochure, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
+
+&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;
+
+&lt;&lt;if $doneFirstInterview == true&gt;&gt;[[Enter|ReturningEmployee]]&lt;&lt;else&gt;&gt;[[Enter]]&lt;&lt;/if&gt;&gt;
+[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="32" name="Mannequin" tags="ending-done" position="1175,675" size="100,100">&lt;h2&gt;Ending - Mannequin&lt;/h2&gt;
 &quot;Excellent choice,&quot; Cassel says, nodding. &quot;I knew you were the right one for the job.&quot; He withdraws some paperwork from his desk and slides it over to you with a pen. &quot;Just sign this contract and you can head off to your new gig!&quot;
 
 After you sign the paperwork you make your way a short distance to Sew it Would Seam, a trendy clothing store a couple streets over. The owner, a fashionable zebra, greets you as you enter.
@@ -1174,7 +1269,7 @@ Here you can view the endings that you&#39;ve unlocked!
 		(achieved endings aren&#39;t shown in list so their earned points don&#39;t appear)
 (FIXED) Reject All ending comes up simultaneous with Secret Ending
 (FIXED) - Questions can come up repeatedly
-(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="36" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
+(FIXED) - Don&#39;t know how to display score adds in NG+</tw-passagedata><tw-passagedata pid="36" name="DecideFate" tags="" position="725,1075" size="100,100">&lt;&lt;set $secondThoughts to false, $doneFirstInterview to true&gt;&gt;&lt;&lt;set $leaveCount = 0&gt;&gt;&lt;&lt;if $firstOffer is false&gt;&gt;&lt;&lt;nobr&gt;&gt;
 	&lt;&lt;set $firstOffer to true&gt;&gt;
 	&lt;&lt;EndingsManager&gt;&gt;&lt;&lt;/nobr&gt;&gt;
 &lt;&lt;else&gt;&gt;&lt;&lt;nobr&gt;&gt;
@@ -1660,6 +1755,8 @@ Currently-Complete Endings:
 - Baseball Bat
 - Fursuit
 - Mannequin
+- Ice Sculpture
+- Standee
 - Secret Ending: Clone
 - Secret Ending: Desktop Toy
 - Secret Ending: Revolving Door
@@ -1686,12 +1783,15 @@ https://www.furaffinity.net/user/blueballs
 
 &lt;&lt;if $jobsTaken &lt; 1&gt;&gt;As you read, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. A fennec fox stands in the threshold and sees you waiting.
 
-&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.&lt;&lt;else&gt;&gt;As you browse the magaziness, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
-
-&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;&lt;&lt;/if&gt;&gt;
+&quot;Ah, an applicant!&quot; he says. &quot;Come in, come in!&quot; He beckons you into his office.
 
 [[Enter]]
-[[On second thought...|Leave]]</tw-passagedata><tw-passagedata pid="47" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
+[[On second thought...|Leave]]&lt;&lt;else&gt;&gt;As you browse the magaziness, the voice on the phone stops, and a few moments later the door behind the secretary&#39;s desk opens. Cassel stands in the threshold and beams when he sees you.
+
+&quot;You&#39;re back for more, eh?&quot; he says. &quot;Well, come on in!&quot;
+
+&lt;&lt;if $doneFirstInterview == true&gt;&gt;[[Enter|ReturningEmployee]]&lt;&lt;else&gt;&gt;[[Enter]]&lt;&lt;/if&gt;&gt;
+[[On second thought...|Leave]]&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="47" name="end_Revolving" tags="" position="1125,800" size="100,100">&lt;&lt;include &quot;Revolving Door&quot;&gt;&gt;
 &lt;&lt;if !$priorEndings.some(ending =&gt; ending.name === &quot;Revolving Door&quot;)&gt;&gt;
   &lt;&lt;set $priorEndings.push({name: &quot;Revolving Door&quot;, other_properties: &quot;values&quot;})&gt;&gt;
 &lt;&lt;/if&gt;&gt;
